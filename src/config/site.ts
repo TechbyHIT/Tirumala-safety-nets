@@ -4,7 +4,7 @@ export const site = {
   tagline: "Safety nets, invisible grills and bird protection across Hyderabad",
   description:
     "Tirumala Safety Nets measures and installs balcony safety nets, pigeon nets, invisible grills, children and pet nets, cloth hangers and sports nets for homes and buildings across Hyderabad and Secunderabad. A written quote follows the site measurement.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:5125",
   phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY || "",
   phoneTel: process.env.NEXT_PUBLIC_PHONE_TEL || "",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "",

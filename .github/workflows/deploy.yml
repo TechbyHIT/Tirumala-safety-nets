@@ -1,0 +1,41 @@
+# Hostinger Business starts this Next.js app as a Node server.
+# A push to main deploys through Hostinger's GitHub connection.
+# This workflow only proves the production build succeeds. It does not
+# upload files: static export and an SFTP copy of out/ would drop middleware,
+# sitemap routes, and the legacy redirects.
+
+name: Production build
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: production-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
+          NEXT_PUBLIC_PHONE_DISPLAY: ${{ secrets.NEXT_PUBLIC_PHONE_DISPLAY }}
+          NEXT_PUBLIC_PHONE_TEL: ${{ secrets.NEXT_PUBLIC_PHONE_TEL }}
+          NEXT_PUBLIC_WHATSAPP: ${{ secrets.NEXT_PUBLIC_WHATSAPP }}
+          NEXT_PUBLIC_EMAIL: ${{ secrets.NEXT_PUBLIC_EMAIL }}

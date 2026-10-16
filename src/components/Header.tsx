@@ -11,7 +11,7 @@ type LinkItem = { href: string; label: string };
 function Logo() {
   return (
     <Link href="/" className="block shrink-0" aria-label="Tirumala Safety Nets home">
-      <img src="/brand/logo.png" alt="" className="h-11 w-auto sm:h-14" />
+      <img src="/brand/logo.webp" alt="" className="h-11 w-auto sm:h-14" />
     </Link>
   );
 }
