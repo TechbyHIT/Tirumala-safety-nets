@@ -1,0 +1,508 @@
+{
+  "generatedAt": "2026-10-11T05:33:42.256Z",
+  "templateVersion": 3,
+  "batchSize": 80,
+  "counts": {
+    "publish": 22487,
+    "review": 40,
+    "exclude": 9914
+  },
+  "rejected": [
+    {
+      "path": "/services/invisible-grills/visakhapatnam/gajuwaka",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/visakhapatnam/rushikonda",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/visakhapatnam/pendurthi",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/visakhapatnam/simhachalam",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/visakhapatnam/sabbavaram",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/visakhapatnam/old-gajuwaka",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/visakhapatnam/narava",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/visakhapatnam/sontyam",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/visakhapatnam/aganampudi",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/visakhapatnam/thimmapuram",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/visakhapatnam/lankelapalem",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/visakhapatnam/pisinikada",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/narsipatnam/agency-approach",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/yellamanchili/yellamanchili-school-ground",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/srikakulam/srikakulam-school-ground",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/kakinada/ramanayyapeta",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/kakinada/turangi",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/kakinada/kakinada-school-ground",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/rajahmundry/diwan-cheruvu",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/rajahmundry/rajahmundry-school-ground",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/eluru/sanivarapupeta",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/bhimavaram/juvvalapalem",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/bhimavaram/housing-board",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/bhimavaram/bhimavaram-housing-board-colony",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/bhimavaram/bhimavaram-rtc-complex-side",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/bhimavaram/bhimavaram-school-ground",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/tadepalligudem/tadepalligudem-school-ground",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/vijayawada/governorpet",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/vijayawada/gollapudi",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/vijayawada/ibrahimpatnam-vij",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/vijayawada/nunna",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/vijayawada/siddhartha-nagar",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/guntur/pattabhipuram",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/guntur/nallapadu",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/guntur/pedakakani",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/guntur/guntur-school-ground",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/tenali/tenali-school-ground",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/chirala/chirala-temple-street",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/chirala/chirala-school-ground",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    },
+    {
+      "path": "/services/invisible-grills/nellore/vedayapalem",
+      "reason": "No verified local overlap between this service and this neighbourhood"
+    }
+  ],
+  "review": [
+    {
+      "id": "service-area:invisible-grills:narsipatnam-town",
+      "path": "/services/invisible-grills/narsipatnam/narsipatnam-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "e8afc7a52dc22579",
+      "score": 68,
+      "title": "Invisible Grills in Narsipatnam town, Narsipatnam",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:invisible-grills:palasa-town",
+      "path": "/services/invisible-grills/palasa/palasa-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "517dcbc71b389622",
+      "score": 68,
+      "title": "Invisible Grills in Palasa town, Palasa",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:invisible-grills:paderu-town",
+      "path": "/services/invisible-grills/paderu/paderu-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "e991ac66e2e3d1ff",
+      "score": 68,
+      "title": "Invisible Grills in Paderu town, Paderu",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:safety-nets:narsipatnam-town",
+      "path": "/services/safety-nets/narsipatnam/narsipatnam-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "0acdbf60bc3ecdf0",
+      "score": 68,
+      "title": "Safety Nets in Narsipatnam town, Narsipatnam",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:safety-nets:palasa-town",
+      "path": "/services/safety-nets/palasa/palasa-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "b207b3eddeb6dd37",
+      "score": 68,
+      "title": "Safety Nets in Palasa town, Palasa",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:safety-nets:paderu-town",
+      "path": "/services/safety-nets/paderu/paderu-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "03d4939d9629b837",
+      "score": 68,
+      "title": "Safety Nets in Paderu town, Paderu",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:balcony-safety-nets:narsipatnam-town",
+      "path": "/services/balcony-safety-nets/narsipatnam/narsipatnam-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "bff794254328d462",
+      "score": 68,
+      "title": "Balcony Safety Nets in Narsipatnam town, Narsipatnam",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:balcony-safety-nets:palasa-town",
+      "path": "/services/balcony-safety-nets/palasa/palasa-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "80fc047a7ec4f552",
+      "score": 68,
+      "title": "Balcony Safety Nets in Palasa town, Palasa",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:balcony-safety-nets:paderu-town",
+      "path": "/services/balcony-safety-nets/paderu/paderu-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "1342f30a2c3df80a",
+      "score": 68,
+      "title": "Balcony Safety Nets in Paderu town, Paderu",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:children-safety-nets:narsipatnam-town",
+      "path": "/services/children-safety-nets/narsipatnam/narsipatnam-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "1a8401520c9ce8b2",
+      "score": 68,
+      "title": "Children Safety Nets in Narsipatnam town, Narsipatnam",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:children-safety-nets:palasa-town",
+      "path": "/services/children-safety-nets/palasa/palasa-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "1ed2ab199e7251d3",
+      "score": 68,
+      "title": "Children Safety Nets in Palasa town, Palasa",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:children-safety-nets:paderu-town",
+      "path": "/services/children-safety-nets/paderu/paderu-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "8a877481d4943df9",
+      "score": 68,
+      "title": "Children Safety Nets in Paderu town, Paderu",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:pet-safety-nets:narsipatnam-town",
+      "path": "/services/pet-safety-nets/narsipatnam/narsipatnam-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "b349f94a116492fd",
+      "score": 68,
+      "title": "Pet Safety Nets in Narsipatnam town, Narsipatnam",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:pet-safety-nets:palasa-town",
+      "path": "/services/pet-safety-nets/palasa/palasa-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "49f2394c7809cc05",
+      "score": 68,
+      "title": "Pet Safety Nets in Palasa town, Palasa",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:pet-safety-nets:paderu-town",
+      "path": "/services/pet-safety-nets/paderu/paderu-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "332821f3c492656f",
+      "score": 68,
+      "title": "Pet Safety Nets in Paderu town, Paderu",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:pigeon-nets:palasa-town",
+      "path": "/services/pigeon-nets/palasa/palasa-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "704556ad7b87a57a",
+      "score": 68,
+      "title": "Pigeon Nets in Palasa town, Palasa",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:pigeon-nets:paderu-town",
+      "path": "/services/pigeon-nets/paderu/paderu-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "a226cf0804cbcd22",
+      "score": 68,
+      "title": "Pigeon Nets in Paderu town, Paderu",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:bird-nets:paderu-town",
+      "path": "/services/bird-nets/paderu/paderu-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "bc437abbcf0f4b5c",
+      "score": 68,
+      "title": "Bird Nets in Paderu town, Paderu",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:duct-area-nets:paderu-town",
+      "path": "/services/duct-area-nets/paderu/paderu-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "f385f4e3968c820e",
+      "score": 68,
+      "title": "Duct Area Nets in Paderu town, Paderu",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    },
+    {
+      "id": "service-area:terrace-safety-nets:narsipatnam-town",
+      "path": "/services/terrace-safety-nets/narsipatnam/narsipatnam-town",
+      "kind": "service-area",
+      "status": "review",
+      "index": false,
+      "version": 1,
+      "inputHash": "7e175bba269f4fc8",
+      "score": 68,
+      "title": "Terrace Safety Nets in Narsipatnam town, Narsipatnam",
+      "reasons": [
+        "Keyword overuse"
+      ],
+      "updatedAt": "2026-10-11T05:33:42.256Z"
+    }
+  ],
+  "samples": [
+    {
+      "id": "service:invisible-grills",
+      "path": "/services/invisible-grills",
+      "status": "publish",
+      "score": 88,
+      "title": "Invisible Grills in Andhra Pradesh",
+      "reasons": []
+    },
+    {
+      "id": "service-city:invisible-grills:visakhapatnam",
+      "path": "/services/invisible-grills/visakhapatnam",
+      "status": "publish",
+      "score": 88,
+      "title": "Invisible Grills in Visakhapatnam",
+      "reasons": []
+    },
+    {
+      "id": "service-city:invisible-grills:kurnool",
+      "path": "/services/invisible-grills/kurnool",
+      "status": "publish",
+      "score": 88,
+      "title": "Invisible Grills in Kurnool",
+      "reasons": []
+    },
+    {
+      "id": "city:visakhapatnam",
+      "path": "/locations/andhra-pradesh/visakhapatnam",
+      "status": "publish",
+      "score": 88,
+      "title": "Invisible Grills and Safety Nets in Visakhapatnam",
+      "reasons": []
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "sri-ganesha-home-safety",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "seo:generate": "tsx scripts/generate-seo.ts",
+    "seo:check": "tsx scripts/generate-seo.ts --check",
+    "seo:audit": "tsx scripts/seo-audit.ts",
+    "seo:inventory": "tsx scripts/seo-inventory.ts",
+    "gallery:ingest": "tsx scripts/ingest-gallery.ts",
+    "gallery:optimize": "tsx scripts/optimize-gallery.ts",
+    "gallery:webp": "tsx scripts/convert-webp.ts"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.23.15",
+    "typescript": "^5.8.3"
+  }
+}
