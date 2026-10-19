@@ -137,9 +137,9 @@ export function Header({
             <a href={wa} className="hidden h-11 w-11 place-items-center rounded-full bg-success-500 text-white sm:grid" aria-label="WhatsApp">
               <WaIcon />
             </a>
-            <Link href={telHref()} className="hidden rounded-full bg-cta-500 px-4 py-2.5 text-sm font-semibold text-brand-950 sm:inline-flex">
+            <a href={telHref()} className="hidden rounded-full bg-cta-500 px-4 py-2.5 text-sm font-semibold text-brand-950 sm:inline-flex">
               Call Now
-            </Link>
+            </a>
             <button
               className="grid h-11 w-11 place-items-center rounded-full border border-brand-100 lg:hidden"
               aria-label={mobile ? "Close menu" : "Open menu"}
@@ -227,10 +227,10 @@ export function Header({
                 </DrawerSection>
               </div>
               <div className="grid grid-cols-2 gap-2 border-t border-brand-900/10 bg-white p-4">
-                <Link href={telHref()} onClick={closeMobile} className="inline-flex items-center justify-center gap-2 rounded-full bg-cta-500 px-3 py-3 text-sm font-semibold text-brand-950">
+                <a href={telHref()} onClick={closeMobile} className="inline-flex items-center justify-center gap-2 rounded-full bg-cta-500 px-3 py-3 text-sm font-semibold text-brand-950">
                   <PhoneIcon />
                   Call Now
-                </Link>
+                </a>
                 <a href={wa} onClick={closeMobile} className="inline-flex items-center justify-center gap-2 rounded-full bg-success-500 px-3 py-3 text-sm font-semibold text-white">
                   <WaIcon />
                   WhatsApp
@@ -346,12 +346,12 @@ export function FloatActions() {
   const wa = whatsappHref("Hello Tirumala Safety Nets, I need a safety installation quote in Hyderabad.") || "/contact";
   return (
     <div className="fixed bottom-4 right-4 z-40 flex flex-col gap-3">
-      <a href={wa} className="grid h-14 w-14 place-items-center rounded-full bg-success-500 text-white shadow-card" aria-label="WhatsApp">
+      <a href={wa} target="_blank" rel="noopener noreferrer" className="grid h-14 w-14 place-items-center rounded-full bg-success-500 text-white shadow-card" aria-label="WhatsApp">
         <WaIcon />
       </a>
-      <Link href={telHref()} className="grid h-14 w-14 place-items-center rounded-full bg-cta-500 text-brand-950 shadow-card" aria-label="Call">
+      <a href={telHref()} className="grid h-14 w-14 place-items-center rounded-full bg-cta-500 text-brand-950 shadow-card" aria-label="Call">
         <PhoneIcon className="h-6 w-6" />
-      </Link>
+      </a>
     </div>
   );
 }

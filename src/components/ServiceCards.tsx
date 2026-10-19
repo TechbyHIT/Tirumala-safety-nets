@@ -33,9 +33,9 @@ export function ServiceCards() {
                     <Link href={card.href} className="inline-flex min-h-10 items-center rounded-full bg-brand-950 px-4 py-2 text-sm font-semibold text-white">
                       View Details →
                     </Link>
-                    <Link href={callHref} className="inline-flex min-h-10 items-center rounded-full border border-brand-900/20 px-4 py-2 text-sm font-semibold text-brand-950">
+                    <a href={callHref} className="inline-flex min-h-10 items-center rounded-full border border-brand-900/20 px-4 py-2 text-sm font-semibold text-brand-950">
                       Call
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </article>
