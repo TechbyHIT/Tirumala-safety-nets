@@ -1,7 +1,7 @@
 import { posts } from "../src/data/blog";
 import { pageAt } from "../src/seo/catalog";
 import { publishedRecords, registryByPath } from "../src/seo/indexable";
-import { absoluteLoc, urlsFor, urlset, xmlEscape } from "../src/seo/sitemaps";
+import { absoluteLoc, sitemapOrigin, urlsFor, urlset, xmlEscape } from "../src/seo/sitemaps";
 import { TEMPLATE_VERSION } from "../src/seo/types";
 import { readRegistry } from "../src/seo/registry";
 
@@ -58,6 +58,10 @@ check("sitemap groups do not repeat URLs", overlap === 0, `${overlap} URLs appea
 const escaped = xmlEscape(`https://example.com/a&b`);
 check("xml escape", escaped === "https://example.com/a&amp;b", escaped);
 check("absolute loc", absoluteLoc("/services").endsWith("/services"), absoluteLoc("/services"));
+const publicOrigin = sitemapOrigin(new Request("https://tirumalasafetynetsinvisiblegrills.in/sitemap.xml", { headers: { host: "tirumalasafetynetsinvisiblegrills.in" } }));
+check("public sitemap origin", publicOrigin === "https://tirumalasafetynetsinvisiblegrills.in", publicOrigin);
+const publicXml = urlset(["/services"], publicOrigin);
+check("public sitemap loc", publicXml.includes("<loc>https://tirumalasafetynetsinvisiblegrills.in/services</loc>"), publicXml.split("\n")[2] ?? publicXml);
 check("blog posts included", posts.every((post) => urlsFor("core").includes(`/blog/${post.slug}`)), "a blog post is missing from the core sitemap");
 
 const review = records.find((record) => record.status === "review");

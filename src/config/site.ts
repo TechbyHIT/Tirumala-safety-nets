@@ -1,10 +1,18 @@
+export const canonicalOrigin = "https://tirumalasafetynetsinvisiblegrills.in";
+
+function resolveSiteUrl() {
+  const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
+  if (configured) return configured;
+  return process.env.NODE_ENV === "production" ? canonicalOrigin : "http://localhost:5125";
+}
+
 export const site = {
   name: "Tirumala Safety Nets",
   shortName: "Tirumala",
   tagline: "Safety nets, invisible grills and bird protection across Hyderabad",
   description:
     "Tirumala Safety Nets measures and installs balcony safety nets, pigeon nets, invisible grills, children and pet nets, cloth hangers and sports nets for homes and buildings across Hyderabad and Secunderabad. A written quote follows the site measurement.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:5125",
+  url: resolveSiteUrl(),
   phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY || "+91 88973 00699",
   phoneTel: process.env.NEXT_PUBLIC_PHONE_TEL || "+918897300699",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP || "918897300699",
