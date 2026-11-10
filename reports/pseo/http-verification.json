@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-10T06:26:26.987Z",
+  "base": "http://localhost:3100",
+  "sitemapFiles": 12,
+  "sitemapUrls": 9137,
+  "sitemapPassed": 9137,
+  "resumedFrom": 0,
+  "noindexSampled": 100,
+  "consolidatedSampled": 40,
+  "redirectsChecked": 7,
+  "failures": []
+}

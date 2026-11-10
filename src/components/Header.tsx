@@ -174,7 +174,7 @@ export function Header({
               <div className="max-h-[min(64vh,640px)] overflow-auto p-6">
                 <AreaColumns regions={regions} className="grid gap-8 sm:grid-cols-2" onPick={() => window.setTimeout(() => setOpen(null), 0)} />
               </div>
-              <MenuHelp prompt="Looking for a neighbourhood?" href="/locations" action="View all areas →" onPick={() => window.setTimeout(() => setOpen(null), 0)} />
+              <MenuHelp prompt="Looking for a neighbourhood?" href="/locations/hyderabad" action="View all areas →" onPick={() => window.setTimeout(() => setOpen(null), 0)} />
             </div>
           </div>
         ) : null}
@@ -221,7 +221,7 @@ export function Header({
                   onToggle={() => setMobileSection((value) => (value === "areas" ? null : "areas"))}
                 >
                   <AreaColumns regions={regions} className="grid gap-5" onPick={closeMobile} />
-                  <Link href="/locations" onClick={closeMobile} className="mt-4 inline-flex text-sm font-semibold text-brand-950">
+                  <Link href="/locations/hyderabad" onClick={closeMobile} className="mt-4 inline-flex text-sm font-semibold text-brand-950">
                     View all areas →
                   </Link>
                 </DrawerSection>

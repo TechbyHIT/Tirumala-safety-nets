@@ -124,7 +124,7 @@ export function HomePage() {
               </article>
             ))}
           </div>
-          <Link href="/locations" className="mt-6 inline-flex text-sm font-semibold text-brand-900">
+          <Link href="/locations/hyderabad" className="mt-6 inline-flex text-sm font-semibold text-brand-900">
             All Hyderabad areas →
           </Link>
         </div>

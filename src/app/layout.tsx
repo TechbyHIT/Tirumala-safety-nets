@@ -25,23 +25,39 @@ export const metadata: Metadata = {
     locale: "en_IN",
     type: "website",
   },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
-  name: site.name,
-  description: site.description,
-  email: site.email,
-  areaServed: { "@type": "City", name: "Hyderabad" },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Hyderabad",
-    addressRegion: "Telangana",
-    addressCountry: "IN",
+const businessId = `${site.url.replace(/\/$/, "")}/#business`;
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "@id": businessId,
+    name: site.name,
+    description: site.description,
+    email: site.email,
+    telephone: site.phoneTel,
+    openingHours: "Mo-Su 08:00-20:00",
+    areaServed: { "@type": "City", name: "Hyderabad" },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Hyderabad",
+      addressRegion: "Telangana",
+      addressCountry: "IN",
+    },
+    url: site.url,
   },
-  url: site.url,
-};
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.name,
+    url: site.url,
+    publisher: { "@id": businessId },
+  },
+];
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const path = (await headers()).get("x-pathname") ?? "";

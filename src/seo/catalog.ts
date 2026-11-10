@@ -1,3 +1,4 @@
+import legacyIndex from "../../data/pseo/legacy-index.json";
 import { cities, citiesIn, getCity } from "@/data/cities";
 import { priceGuides } from "@/data/materials";
 import { getIntent, getService, services } from "@/data/services";
@@ -105,7 +106,16 @@ function indexablePathSet() {
   return indexablePaths;
 }
 
+const auditedNoindex = legacyIndex.noindex as Record<string, string>;
+
 export function pageAt(path: string) {
+  const page = assessedPageAt(path);
+  const reason = page?.index ? auditedNoindex[path] : undefined;
+  if (!page || !reason) return page;
+  return { ...page, status: "review" as const, index: false, reasons: [...page.reasons, reason] };
+}
+
+export function assessedPageAt(path: string) {
   if (rendered.has(path)) return rendered.get(path);
   const draft = draftFor(path);
   if (!draft) {

@@ -12,6 +12,12 @@
     "seo:check": "tsx scripts/generate-seo.ts --check",
     "seo:audit": "tsx scripts/seo-audit.ts",
     "seo:inventory": "tsx scripts/seo-inventory.ts",
+    "pseo:generate": "tsx scripts/generate-hyderabad-pseo.ts",
+    "pseo:check": "tsx scripts/generate-hyderabad-pseo.ts --check",
+    "pseo:records": "tsx scripts/generate-hyderabad-pseo.ts --write-records",
+    "pseo:postal": "tsx scripts/build-postal-localities.ts",
+    "pseo:legacy": "tsx scripts/audit-legacy.ts",
+    "pseo:verify": "tsx scripts/verify-http.ts",
     "gallery:ingest": "tsx scripts/ingest-gallery.ts",
     "gallery:optimize": "tsx scripts/optimize-gallery.ts",
     "gallery:webp": "tsx scripts/convert-webp.ts"

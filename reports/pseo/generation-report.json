@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-11-10T06:14:36.968Z",
+  "sourceAsOf": {
+    "ghmc": "2025-12-25",
+    "postal": "2026-11-10"
+  },
+  "database": {
+    "states": 1,
+    "districts": 4,
+    "zones": 12,
+    "circles": 60,
+    "wards": 300,
+    "wardLocalities": 300,
+    "postOfficeLocalities": 125,
+    "localities": 425,
+    "pinCodes": 103,
+    "colonies": 0,
+    "apartments": 0,
+    "services": 17,
+    "locationSources": 3
+  },
+  "pages": {
+    "generated": 50000,
+    "indexable": 7225,
+    "noindex": 0,
+    "published": 7225,
+    "canonicalConsolidations": 42775,
+    "classification": {
+      "uniqueValuable": 7225,
+      "nearDuplicateConsolidated": 42775,
+      "duplicateIntent": 14450,
+      "thin": 0,
+      "usefulLongTailConsolidated": 42775,
+      "locationSpecific": 7225
+    },
+    "variantSimilarityToPrimary": {
+      "sampled": 101,
+      "min": 0.911,
+      "average": 0.981,
+      "max": 0.996
+    },
+    "noindexByReason": {},
+    "hubsIndexable": 475
+  },
+  "duplicates": {
+    "paths": 0,
+    "canonicals": 7225,
+    "titles": 0,
+    "descriptions": 0,
+    "h1s": 0,
+    "publishedTitles": 0,
+    "publishedDescriptions": 0,
+    "publishedBodyDuplicates": 0,
+    "nearDuplicateServices": {},
+    "topServiceSimilarity": [
+      {
+        "pair": "window-invisible-grills / invisible-grills",
+        "score": 0.485
+      },
+      {
+        "pair": "openable-invisible-grills / invisible-grills",
+        "score": 0.46
+      },
+      {
+        "pair": "balcony-invisible-grills / invisible-grills",
+        "score": 0.443
+      },
+      {
+        "pair": "openable-invisible-grills / window-invisible-grills",
+        "score": 0.421
+      },
+      {
+        "pair": "window-invisible-grills / balcony-invisible-grills",
+        "score": 0.407
+      }
+    ]
+  },
+  "publishedQuality": {
+    "checked": 7225,
+    "wordsMin": 559,
+    "wordsMax": 839,
+    "wordsAverage": 653,
+    "thin": 0,
+    "fewFaqs": 0,
+    "fewNearby": 153
+  },
+  "internalLinks": {
+    "broken": 0,
+    "toNoindex": 0,
+    "sampleBroken": []
+  },
+  "missing": {
+    "colonies": "No source publishes colony-to-ward relationships for the 2025 GHMC wards; none generated.",
+    "apartments": "No source publishes apartment-to-locality relationships; none generated.",
+    "wardsWithoutPin": 212,
+    "localitiesWithFewFacts": 0,
+    "primaryCombinationsOutsideTarget": 0
+  },
+  "sitemaps": {
+    "files": 12,
+    "programmaticFiles": 4,
+    "urls": 9136,
+    "byFile": {
+      "core": 68,
+      "services": 22,
+      "locations": 61,
+      "zones": 12,
+      "wards": 300,
+      "localities": 103,
+      "legacy-locations": 1345,
+      "images": 0,
+      "programmatic-001": 2000,
+      "programmatic-002": 2000,
+      "programmatic-003": 2000,
+      "programmatic-004": 1225
+    },
+    "largest": 2000,
+    "imageSitemapImages": 421,
+    "firstProgrammatic": "/invisible-grills-in-keesara"
+  },
+  "failures": []
+}

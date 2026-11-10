@@ -1,17 +1,19 @@
+import legacyIndex from "../../data/pseo/legacy-index.json";
 import { posts } from "@/data/blog";
-import { cities } from "@/data/cities";
 import { libraryItems } from "@/data/library";
-import { priceGuides } from "@/data/materials";
-import { services } from "@/data/services";
 import { canonicalOrigin, site } from "@/config/site";
+import { circles, pinCodes, services as targetServices, wards, zones } from "@/pseo/database";
+import { galleryPhotos } from "@/data/gallery";
+import { CONTENT_UPDATED, programmaticSitemapCount, recordForSlug, recordsForSitemap } from "@/pseo/generator";
+import { circlePath, pinPath, wardPath, zonePath } from "@/pseo/paths";
 import { publishedRecords } from "@/seo/indexable";
-import { isSyntheticLocalitySlug } from "./eligibility";
-import { areaPath, cityPath, guidePath, servicePath, statePath } from "./urls";
+import { servicePath, statePath } from "./urls";
+
+export const SITEMAP_LIMIT = 50_000;
 
 const staticPaths = [
   "/",
   "/services",
-  "/locations",
   "/gallery",
   "/about",
   "/blog",
@@ -20,6 +22,11 @@ const staticPaths = [
   "/sitemap",
   ...libraryItems.map((item) => `/services/library/${item.slug}`),
 ];
+
+const legacyIndexable = legacyIndex.indexable as string[];
+
+export const fixedGroups = ["core", "services", "locations", "zones", "wards", "localities", "legacy-locations", "images"] as const;
+export type FixedGroup = (typeof fixedGroups)[number];
 
 export function xmlEscape(value: string) {
   return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -38,21 +45,46 @@ export function absoluteLoc(path: string, origin = site.url) {
   return `${origin.replace(/\/$/, "")}${path}`;
 }
 
-export function urlsFor(group: "core" | "services" | "locations") {
+export function urlsFor(group: FixedGroup): string[] {
   if (group === "core") {
-    const guides = services.flatMap((service) => service.intents.map((intent) => guidePath(intent.slug)));
-    const prices = priceGuides.map((guide) => guidePath(guide.slug));
-    return [...staticPaths, ...posts.map((post) => `/blog/${post.slug}`), ...guides, ...prices];
+    const guides = legacyIndexable.filter((path) => path.startsWith("/guides/"));
+    return [...staticPaths, ...posts.map((post) => `/blog/${post.slug}`), ...guides];
   }
-  if (group === "services") return services.map((service) => servicePath(service.slug));
-  if (group === "locations") {
-    return [
-      statePath(),
-      ...cities.map((city) => cityPath(city.slug)),
-      ...cities.flatMap((city) => city.areas.filter((area) => !isSyntheticLocalitySlug(area.slug)).map((area) => areaPath(city.slug, area.slug))),
-    ];
+  if (group === "services") {
+    const legacyOnly = legacyIndexable.filter((path) => /^\/services\/[^/]+$/.test(path));
+    return [...new Set([...targetServices.map((service) => servicePath(service.id)), ...legacyOnly])];
   }
-  return [];
+  if (group === "locations") return [statePath(), ...circles.map((circle) => circlePath(circle.id))];
+  if (group === "zones") return zones.map((zone) => zonePath(zone.id));
+  if (group === "wards") return wards.map((ward) => wardPath(ward.id));
+  if (group === "localities") return pinCodes.map((pin) => pinPath(pin));
+  if (group === "images") return [];
+  return legacyIndexable.filter((path) => path.startsWith("/locations/hyderabad/"));
+}
+
+export function programmaticSitemapNames() {
+  return Array.from({ length: programmaticSitemapCount() }, (_, index) => `programmatic-${String(index + 1).padStart(3, "0")}`);
+}
+
+export function programmaticUrlsFor(name: string) {
+  const match = /^programmatic-(\d{3})$/.exec(name);
+  if (!match) return undefined;
+  const shard = Number(match[1]) - 1;
+  if (shard < 0 || shard >= programmaticSitemapCount()) return undefined;
+  return recordsForSitemap(shard).map((record) => record.path);
+}
+
+export function imageCount() {
+  return galleryPhotos.length;
+}
+
+export function allSitemapNames() {
+  return [...fixedGroups.filter((group) => group === "images" || urlsFor(group).length > 0), ...programmaticSitemapNames()];
+}
+
+export function urlsForSitemap(name: string) {
+  if ((fixedGroups as readonly string[]).includes(name)) return urlsFor(name as FixedGroup);
+  return programmaticUrlsFor(name);
 }
 
 export function urlset(paths: string[], origin = site.url) {
@@ -61,10 +93,23 @@ export function urlset(paths: string[], origin = site.url) {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${paths
   .map((path) => {
-    const lastmod = modified.get(path);
+    const programmatic = path.slice(1).length > 0 && !path.slice(1).includes("/") ? recordForSlug(path.slice(1)) : undefined;
+    const lastmod = modified.get(path) ?? (programmatic || path.startsWith("/locations/hyderabad") ? CONTENT_UPDATED : undefined);
     const loc = xmlEscape(absoluteLoc(path, origin));
     return `  <url><loc>${loc}</loc>${lastmod ? `<lastmod>${xmlEscape(lastmod)}</lastmod>` : ""}</url>`;
   })
   .join("\n")}
+</urlset>`;
+}
+
+export function imageUrlset(origin = site.url) {
+  const images = galleryPhotos
+    .map((photo) => `    <image:image><image:loc>${xmlEscape(absoluteLoc(photo.src, origin))}</image:loc><image:caption>${xmlEscape(photo.alt)}</image:caption></image:image>`)
+    .join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>${xmlEscape(absoluteLoc("/gallery", origin))}</loc>
+${images}
+  </url>
 </urlset>`;
 }

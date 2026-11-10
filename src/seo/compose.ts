@@ -200,7 +200,7 @@ export function composeState(cities: City[]): PageDocument {
     eyebrow: "Entire Hyderabad",
     hero: "Tirumala Safety Nets measures and fits balcony, window, duct and terrace systems across Hyderabad, Secunderabad and the ORR neighbourhoods. Open a locality to see the housing note and the areas we list.",
     ...shot("state:hyderabad", "invisible-grills"),
-    breadcrumb: crumb({ href: "/locations", label: "Locations" }, { label: STATE.name }),
+    breadcrumb: crumb({ label: STATE.name }),
     params: { state: STATE.slug },
     quote: {},
     inputHash: hash({ kind: "state", cities: cities.map((city) => city.slug) }),
@@ -240,7 +240,6 @@ export function composeCity(city: City, regionCities: City[], services: Service[
     hero: city.intro,
     ...shot(`city:${city.slug}`, "balcony-safety-nets"),
     breadcrumb: crumb(
-      { href: "/locations", label: "Locations" },
       { href: statePath(), label: STATE.name },
       { label: city.name },
     ),

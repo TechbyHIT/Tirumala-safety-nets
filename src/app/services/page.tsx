@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { absoluteUrl } from "@/seo/urls";
+import { absoluteUrl, servicePath } from "@/seo/urls";
 import Image from "next/image";
 import Link from "next/link";
 import { InstallationGallery } from "@/components/InstallationGallery";
 import { cardImage, galleryCards, heroImage } from "@/data/gallery";
 import { libraryGroups } from "@/data/library";
 import { serviceGroups, services } from "@/data/services";
+import { services as targetServices } from "@/pseo/database";
 import { GoldLink, PageHero } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -27,6 +28,21 @@ export default function ServicesPage() {
         actions={<GoldLink href="/contact?need=photo">Get a photo estimate</GoldLink>}
       />
       <div className="mx-auto max-w-6xl space-y-14 px-4 py-12 sm:px-6">
+        <section>
+          <p className="text-xs font-semibold uppercase tracking-wide text-cta-600">17 Hyderabad services</p>
+          <h2 className="mt-1 font-display text-3xl font-bold">Primary service directory</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {targetServices.map((service) => (
+              <article key={service.id} className="rounded-3xl bg-white p-5 ring-1 ring-brand-100">
+                <p className="text-xs font-semibold uppercase tracking-wide text-cta-600">{service.category.replace("-", " ")}</p>
+                <h3 className="mt-1 font-display text-lg font-bold">
+                  <Link href={`/services/${service.id}`}>{service.name}</Link>
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-brand-800/75">{service.summary}</p>
+              </article>
+            ))}
+          </div>
+        </section>
         <section className="rounded-3xl bg-white p-6 ring-1 ring-brand-100">
           <h2 className="font-display text-2xl font-bold">Compare related fittings before choosing</h2>
           <ul className="mt-4 grid gap-3 text-sm leading-6 text-brand-800/80 sm:grid-cols-2">
@@ -78,7 +94,7 @@ export default function ServicesPage() {
                     <div className="p-5">
                       <p className="text-xs font-semibold uppercase tracking-wide text-cta-600">{service.group}</p>
                       <h3 className="mt-1 font-display text-lg font-bold">
-                        <Link href={`/services/${service.slug}`}>{service.name}</Link>
+                        <Link href={servicePath(service.slug)}>{service.name}</Link>
                       </h3>
                       <p className="mt-2 text-sm leading-6 text-brand-800/75">{service.summary}</p>
                     </div>

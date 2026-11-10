@@ -1,8 +1,17 @@
 import { site } from "@/config/site";
 import { STATE } from "./types";
 
+export const serviceAliases: Record<string, string> = {
+  "children-safety-nets": "child-safety-nets",
+  "pigeon-nets": "pigeon-safety-nets",
+  "bird-nets": "bird-protection-nets",
+  "anti-bird-spikes": "bird-spikes",
+  "duct-area-nets": "duct-area-safety-nets",
+  "cricket-nets": "cricket-practice-nets",
+};
+
 export function servicePath(service: string) {
-  return `/services/${service}`;
+  return `/services/${serviceAliases[service] ?? service}`;
 }
 
 export function statePath() {

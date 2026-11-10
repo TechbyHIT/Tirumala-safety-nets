@@ -7,7 +7,7 @@ import { CheckList, GoldLink, PageHero } from "@/components/ui";
 import { cardImage, galleryCards, heroImage } from "@/data/gallery";
 import { getLibraryItem, libraryGroupFor, libraryItems } from "@/data/library";
 import { getService } from "@/data/services";
-import { absoluteUrl } from "@/seo/urls";
+import { absoluteUrl, servicePath } from "@/seo/urls";
 
 type Params = { slug: string };
 
@@ -49,7 +49,7 @@ export default async function LibraryPage({ params }: { params: Promise<Params> 
           <>
             <GoldLink href="/contact">Get a quote</GoldLink>
             {parent ? (
-              <Link href={`/services/${parent.slug}`} className="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white">
+              <Link href={servicePath(parent.slug)} className="inline-flex min-h-11 items-center rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white">
                 {parent.name}
               </Link>
             ) : null}

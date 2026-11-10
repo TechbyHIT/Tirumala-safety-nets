@@ -1,6 +1,7 @@
 import { priceGuides } from "@/data/materials";
 import { cities, getCity } from "@/data/cities";
 import { getIntent, getService, services } from "@/data/services";
+import { servicePath } from "@/seo/urls";
 
 export function comboSlug(serviceSlug: string, citySlug: string) {
   return `${serviceSlug}-in-${citySlug}`;
@@ -43,7 +44,7 @@ export function cityHref(slug: string) {
 }
 
 export function serviceHref(slug: string) {
-  return `/services/${slug}`;
+  return servicePath(slug);
 }
 
 export const popularLinks = [

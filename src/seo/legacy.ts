@@ -2,13 +2,19 @@ import { priceGuides } from "@/data/materials";
 import { getArea, getCity } from "@/data/cities";
 import { getIntent, getService } from "@/data/services";
 import { parseCombo } from "@/lib/pages";
-import { areaPath, cityPath, guidePath, servicePath } from "./urls";
+import { isProgrammaticSlug } from "@/pseo/slugs";
+import { areaPath, cityPath, guidePath, serviceAliases, servicePath } from "./urls";
+
+export { serviceAliases };
 
 export function legacyRedirect(pathname: string) {
   const path = pathname.replace(/\/$/, "") || "/";
   if (path.startsWith("/locations/andhra-pradesh")) {
     return path.replace("/locations/andhra-pradesh", "/locations/hyderabad");
   }
+
+  const alias = path.match(/^\/services\/([^/]+)$/);
+  if (alias && serviceAliases[alias[1] ?? ""]) return servicePath(alias[1]!);
 
   const serviceCombo = path.match(/^\/services\/([^/]+)\/([^/]+)(?:\/([^/]+))?(?:\/([^/]+))?$/);
   if (serviceCombo && serviceCombo[1] !== "library") {
@@ -43,6 +49,7 @@ export function legacyRedirect(pathname: string) {
   const price = priceGuides.find((guide) => `/${guide.slug}` === path);
   if (price) return guidePath(price.slug);
 
+  if (isProgrammaticSlug(path.slice(1))) return null;
   const combo = parseCombo(path.slice(1));
   if (combo) return cityPath(combo.city.slug);
 

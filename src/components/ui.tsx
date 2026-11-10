@@ -256,7 +256,7 @@ export function CtaBand({ title, text }: { title: string; text: string }) {
         </div>
         <div className="flex flex-wrap gap-3">
           <GoldLink href="/contact">Request a free visit</GoldLink>
-          <GhostLink href="/locations">Cities we measure</GhostLink>
+          <GhostLink href="/locations/hyderabad">Areas we measure</GhostLink>
         </div>
       </div>
     </section>

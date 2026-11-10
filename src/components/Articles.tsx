@@ -221,7 +221,7 @@ export function CityView({ city }: { city: City }) {
         eyebrow={`${city.region} | ${city.district}`}
         title={`Safety nets and invisible grills in ${city.name}`}
         text={city.intro}
-        crumbs={[{ href: "/", label: "Home" }, { href: "/locations", label: "Locations" }, { label: city.name }]}
+        crumbs={[{ href: "/", label: "Home" }, { href: "/locations/hyderabad", label: "Hyderabad" }, { label: city.name }]}
       />
       <Frame>
         <div className="space-y-10">

@@ -113,7 +113,7 @@ export function assess(page: PageDocument, names: string[], seen: Map<string, st
 }
 
 export function dropUnpublishedLinks(page: PageDocument, indexable: Set<string>) {
-  const always = new Set(["/", "/services", "/locations", "/contact", "/faq", "/blog", "/about", "/gallery"]);
+  const always = new Set(["/", "/services", "/locations/hyderabad", "/contact", "/faq", "/blog", "/about", "/gallery"]);
   page.modules = page.modules
     .map((module) => {
       if (module.type !== "links") return module;

@@ -3,6 +3,7 @@ import { searchOptions } from "@/data/search-options";
 import { serviceGroups, services } from "@/data/services";
 import { coverage } from "@/data/stats";
 import { popularLinks } from "@/lib/pages";
+import { servicePath } from "@/seo/urls";
 import { Header } from "./Header";
 
 const hubSlugs = ["gachibowli", "kukatpally", "banjara-hills", "secunderabad", "lb-nagar", "mehdipatnam"];
@@ -10,7 +11,7 @@ const hubSlugs = ["gachibowli", "kukatpally", "banjara-hills", "secunderabad", "
 export function SiteChrome() {
   const groups = serviceGroups.map((name) => ({
     name,
-    items: services.filter((service) => service.group === name).map((service) => ({ href: `/services/${service.slug}`, label: service.name })),
+    items: services.filter((service) => service.group === name).map((service) => ({ href: servicePath(service.slug), label: service.name })),
   }));
   const regionNav = regions.map((region) => ({
     name: region,

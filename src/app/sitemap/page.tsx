@@ -3,6 +3,8 @@ import Link from "next/link";
 import { PageHero } from "@/components/ui";
 import { cities } from "@/data/cities";
 import { services } from "@/data/services";
+import { zones } from "@/pseo/database";
+import { zonePath } from "@/pseo/paths";
 import { absoluteUrl, cityPath, servicePath, statePath } from "@/seo/urls";
 
 export const metadata: Metadata = {
@@ -48,6 +50,17 @@ export default function SitemapPage() {
               Entire Hyderabad
             </Link>
           </p>
+          <h3 className="mt-6 font-display text-lg font-bold">GHMC zones</h3>
+          <ul className="mt-3 columns-1 gap-x-8 text-sm sm:columns-2 lg:columns-3">
+            {zones.map((zone) => (
+              <li key={zone.id} className="mb-1.5 break-inside-avoid">
+                <Link href={zonePath(zone.id)} className="hover:text-cta-600">
+                  {zone.name} Zone
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <h3 className="mt-6 font-display text-lg font-bold">Neighbourhood guides</h3>
           <ul className="mt-3 columns-1 gap-x-8 text-sm sm:columns-2 lg:columns-3">
             {cities.map((city) => (
               <li key={city.slug} className="mb-1.5 break-inside-avoid">

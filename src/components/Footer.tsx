@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { site, telHref, whatsappHref } from "@/config/site";
 import { cities } from "@/data/cities";
+import { servicePath } from "@/seo/urls";
 
 export function Footer() {
   const wa = whatsappHref("Hello Tirumala Safety Nets, please share a visit slot in Hyderabad.");
@@ -26,7 +27,7 @@ export function Footer() {
               ["cricket-nets", "Cricket practice nets"],
             ].map(([slug, label]) => (
               <li key={slug}>
-                <Link href={`/services/${slug}`} className="hover:text-white">
+                <Link href={servicePath(slug!)} className="hover:text-white">
                   {label}
                 </Link>
               </li>
@@ -53,7 +54,7 @@ export function Footer() {
               );
             })}
             <li>
-              <Link href="/locations" className="font-semibold text-white hover:text-cta-500">
+              <Link href="/locations/hyderabad" className="font-semibold text-white hover:text-cta-500">
                 All Hyderabad areas
               </Link>
             </li>

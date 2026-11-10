@@ -53,7 +53,7 @@ export function SiteModules({ city, service, place }: { city?: City; service?: S
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {[
               ["Balcony and family use", "Open edges, children, pets, and terraces. The barrier has to match who uses the space.", "/services/balcony-safety-nets"],
-              ["Birds entering or perching", "A full opening needs a net. A narrow ledge may only need spikes. They are not the same job.", "/services/pigeon-nets"],
+              ["Birds entering or perching", "A full opening needs a net. A narrow ledge may only need spikes. They are not the same job.", "/services/pigeon-safety-nets"],
               ["View, grade, and the written figure", "Cable or mesh, coastal salt or inland sun, and access all belong in the estimate.", "/contact"],
             ].map(([title, text, href]) => (
               <Link key={title} href={city && href.startsWith("/services/") ? `${href}/${city.slug}` : href} className="rounded-[1.75rem] bg-white/5 p-5 ring-1 ring-white/10">
@@ -130,9 +130,9 @@ export function SiteModules({ city, service, place }: { city?: City; service?: S
           <h2 className="font-display text-3xl font-bold">Match the purpose before the product</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {[
-              ["An open edge", "Balcony, child, or pet protection when someone can reach past the rail.", "Works for open edges that need a purpose-specific barrier.", "/services/children-safety-nets"],
-              ["Birds walking in", "Net the balcony, duct, or shaft they enter. Leave a labelled way to clean it.", "Works for volumes used as a nest, not a thin perch.", "/services/pigeon-nets"],
-              ["Birds only sitting", "Spikes on a ledge, beam, or AC tray. They do not close a balcony.", "Works for narrow landing lines.", "/services/anti-bird-spikes"],
+              ["An open edge", "Balcony, child, or pet protection when someone can reach past the rail.", "Works for open edges that need a purpose-specific barrier.", "/services/child-safety-nets"],
+              ["Birds walking in", "Net the balcony, duct, or shaft they enter. Leave a labelled way to clean it.", "Works for volumes used as a nest, not a thin perch.", "/services/pigeon-safety-nets"],
+              ["Birds only sitting", "Spikes on a ledge, beam, or AC tray. They do not close a balcony.", "Works for narrow landing lines.", "/services/bird-spikes"],
               ["A clear outlook", "Cable when sightlines matter and the slab can take anchors.", "Works for balconies and windows planned around the view.", "/services/invisible-grills"],
             ].map(([title, text, note, href]) => (
               <Link key={title} href={city ? `${href}/${city.slug}` : href} className="rounded-[1.75rem] bg-white/5 p-5 ring-1 ring-white/10">

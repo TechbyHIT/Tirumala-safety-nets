@@ -95,7 +95,7 @@ export function OrganicGuide({ path }: { path: string }) {
             All services
           </Link>
           {" · "}
-          <Link className="font-semibold text-brand-950 underline" href="/locations">
+          <Link className="font-semibold text-brand-950 underline" href="/locations/hyderabad">
             Hyderabad areas
           </Link>
           {" · "}

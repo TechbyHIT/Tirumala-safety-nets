@@ -63,7 +63,7 @@ export const showcaseCards: ShowcaseCard[] = [
   {
     title: "Kids Safety Nets",
     text: "Nets for balconies and windows where children play close to an open edge.",
-    href: "/services/children-safety-nets",
+    href: "/services/child-safety-nets",
     photo: "children-safety-nets",
   },
   {
@@ -75,7 +75,7 @@ export const showcaseCards: ShowcaseCard[] = [
   {
     title: "Children Safety Nets",
     text: "Fall protection for the openings children actually use, measured on site.",
-    href: "/services/children-safety-nets",
+    href: "/services/child-safety-nets",
     photo: "children-safety-nets",
   },
   {
@@ -93,25 +93,25 @@ export const showcaseCards: ShowcaseCard[] = [
   {
     title: "Pigeon Nets",
     text: "Closes the balcony or duct pigeons enter. Birds already inside can leave first.",
-    href: "/services/pigeon-nets",
+    href: "/services/pigeon-safety-nets",
     photo: "pigeon-nets",
   },
   {
     title: "Bird Nets",
     text: "For a space birds walk into, not only a narrow ledge they sit on.",
-    href: "/services/bird-nets",
+    href: "/services/bird-protection-nets",
     photo: "pigeon-nets",
   },
   {
     title: "Anti Bird Spikes",
     text: "For a ledge or sunshade where birds only perch. Not a full balcony net.",
-    href: "/services/anti-bird-spikes",
+    href: "/services/bird-spikes",
     photo: "anti-bird-spikes",
   },
   {
     title: "Duct Area Nets",
     text: "Closes a service duct while leaving a way in that is labelled.",
-    href: "/services/duct-area-nets",
+    href: "/services/duct-area-safety-nets",
     photo: "duct-area-nets",
   },
   {
@@ -147,7 +147,7 @@ export const showcaseCards: ShowcaseCard[] = [
   {
     title: "Cricket Nets",
     text: "Practice nets for a real ground, academy or school, measured bay by bay.",
-    href: "/services/cricket-nets",
+    href: "/services/cricket-practice-nets",
     photo: "cricket-nets",
   },
   {

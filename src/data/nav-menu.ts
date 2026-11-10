@@ -18,7 +18,7 @@ export const menuServices: { title: string; links: MenuLink[] }[] = [
     links: [
       { label: "Safety Nets", href: "/services/safety-nets" },
       { label: "Balcony Safety Nets", href: "/services/balcony-safety-nets" },
-      { label: "Children Safety Nets", href: "/services/children-safety-nets" },
+      { label: "Children Safety Nets", href: "/services/child-safety-nets" },
       { label: "Pet Safety Nets", href: "/services/pet-safety-nets" },
       { label: "Cat Safety Nets", href: "/services/cat-safety-nets" },
       { label: "Terrace Safety Nets", href: "/services/terrace-safety-nets" },
@@ -40,8 +40,8 @@ export const menuServices: { title: string; links: MenuLink[] }[] = [
   {
     title: "Bird Nets",
     links: [
-      { label: "Bird Nets", href: "/services/bird-nets" },
-      { label: "Duct Area Nets", href: "/services/duct-area-nets" },
+      { label: "Bird Nets", href: "/services/bird-protection-nets" },
+      { label: "Duct Area Nets", href: "/services/duct-area-safety-nets" },
       { label: "Duct Area Bird Nets", href: "/guides/bird-nets-for-duct-area" },
       { label: "Monkey Safety Nets", href: "/services/monkey-safety-nets" },
     ],
@@ -49,7 +49,7 @@ export const menuServices: { title: string; links: MenuLink[] }[] = [
   {
     title: "Pigeon Nets",
     links: [
-      { label: "Pigeon Nets", href: "/services/pigeon-nets" },
+      { label: "Pigeon Nets", href: "/services/pigeon-safety-nets" },
       { label: "Balcony Pigeon Nets", href: "/guides/pigeon-nets-for-balcony" },
       { label: "Duct Area Pigeon Nets", href: "/guides/pigeon-nets-for-duct-area" },
     ],
@@ -58,7 +58,7 @@ export const menuServices: { title: string; links: MenuLink[] }[] = [
     title: "Sports Nets",
     links: [
       { label: "Sports Nets", href: "/services/sports-nets" },
-      { label: "Cricket Nets", href: "/services/cricket-nets" },
+      { label: "Cricket Nets", href: "/services/cricket-practice-nets" },
       { label: "Cricket Practice Nets", href: "/guides/cricket-nets-for-practice-grounds" },
     ],
   },
@@ -75,7 +75,7 @@ export const menuServices: { title: string; links: MenuLink[] }[] = [
   {
     title: "Bird Spikes",
     links: [
-      { label: "Anti Bird Spikes", href: "/services/anti-bird-spikes" },
+      { label: "Anti Bird Spikes", href: "/services/bird-spikes" },
       { label: "Pigeon Control Spikes", href: "/guides/anti-bird-spikes-for-pigeon-control" },
     ],
   },

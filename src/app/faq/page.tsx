@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { absoluteUrl } from "@/seo/urls";
+import { absoluteUrl, servicePath } from "@/seo/urls";
 import { InstallationGallery } from "@/components/InstallationGallery";
 import { generalFaqs } from "@/data/faq";
 import { galleryCards, heroImage } from "@/data/gallery";
@@ -46,7 +46,7 @@ export default function FaqPage() {
         <aside className="space-y-3 lg:sticky lg:top-24 lg:self-start">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-cta-600">Open a system</p>
           {services.map((service) => (
-            <Link key={service.slug} href={`/services/${service.slug}`} className="block rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-brand-900 ring-1 ring-brand-100 hover:ring-cta-500">
+            <Link key={service.slug} href={servicePath(service.slug)} className="block rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-brand-900 ring-1 ring-brand-100 hover:ring-cta-500">
               {service.name}
             </Link>
           ))}
