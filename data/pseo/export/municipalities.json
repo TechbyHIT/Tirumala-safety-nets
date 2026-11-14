@@ -1,0 +1,83 @@
+{
+  "municipalities": [],
+  "note": "India Post verifies the town and PIN. It does not certify municipal status, so municipalities.json does not label these towns as municipalities.",
+  "townsVerifiedByIndiaPostOnly": [
+    {
+      "id": "postal-chevella",
+      "name": "Chevella",
+      "pinCodes": [
+        "501503"
+      ]
+    },
+    {
+      "id": "postal-ibrahimpatnam",
+      "name": "Ibrahimpatnam",
+      "pinCodes": [
+        "501506"
+      ]
+    },
+    {
+      "id": "postal-isnapur",
+      "name": "Isnapur",
+      "pinCodes": [
+        "502307"
+      ]
+    },
+    {
+      "id": "postal-kollur",
+      "name": "Kollur",
+      "pinCodes": [
+        "502300"
+      ]
+    },
+    {
+      "id": "postal-mangalpalli",
+      "name": "Mangalpalli",
+      "pinCodes": [
+        "501510"
+      ]
+    },
+    {
+      "id": "postal-moinabad",
+      "name": "Moinabad",
+      "pinCodes": [
+        "501504"
+      ]
+    },
+    {
+      "id": "postal-mokila",
+      "name": "Mokila",
+      "pinCodes": [
+        "501203"
+      ]
+    },
+    {
+      "id": "postal-pocharam-ibrahimpatnam",
+      "name": "Pocharam (Ibrahimpatnam)",
+      "pinCodes": [
+        "501506"
+      ]
+    },
+    {
+      "id": "postal-sangareddy",
+      "name": "Sangareddy",
+      "pinCodes": [
+        "502001"
+      ]
+    },
+    {
+      "id": "postal-shankarpalli",
+      "name": "Shankarpalli",
+      "pinCodes": [
+        "501203"
+      ]
+    },
+    {
+      "id": "postal-vikarabad",
+      "name": "Vikarabad",
+      "pinCodes": [
+        "501101"
+      ]
+    }
+  ]
+}

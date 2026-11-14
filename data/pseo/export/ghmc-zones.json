@@ -1,0 +1,204 @@
+{
+  "source": {
+    "id": "go-ms-292-2025",
+    "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+    "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+    "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+    "issuedAt": "2025-12-24",
+    "accessedAt": "2026-11-10"
+  },
+  "zones": [
+    {
+      "id": "malkajgiri",
+      "name": "Malkajgiri",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/malkajgiri",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "uppal",
+      "name": "Uppal",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/uppal",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "lb-nagar",
+      "name": "LB Nagar",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/lb-nagar",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "shamshabad",
+      "name": "Shamshabad",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/shamshabad",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "rajendranagar",
+      "name": "Rajendranagar",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/rajendranagar",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "charminar",
+      "name": "Charminar",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/charminar",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "golconda",
+      "name": "Golconda",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/golconda",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "khairatabad",
+      "name": "Khairatabad",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/khairatabad",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "secunderabad",
+      "name": "Secunderabad",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/secunderabad",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "serilingampally",
+      "name": "Serilingampally",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/serilingampally",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "kukatpally",
+      "name": "Kukatpally",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/kukatpally",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "quthbullapur",
+      "name": "Quthbullapur",
+      "parentId": "hyderabad",
+      "path": "/locations/hyderabad/zones/quthbullapur",
+      "jurisdiction": "GHMC",
+      "verification_status": "verified",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    }
+  ]
+}

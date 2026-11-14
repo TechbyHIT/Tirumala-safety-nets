@@ -1,0 +1,589 @@
+{
+  "colonies": [
+    {
+      "id": "colony-chandrapuri-colony",
+      "name": "Chandrapuri Colony",
+      "localityId": "locality-002-chandrapuri-colony",
+      "wardId": "ward-002-chandrapuri-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-h-b-colony",
+      "name": "H.B. Colony",
+      "localityId": "locality-019-h-b-colony",
+      "wardId": "ward-019-h-b-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-lecturers-colony",
+      "name": "Lecturers Colony",
+      "localityId": "locality-047-lecturers-colony",
+      "wardId": "ward-047-lecturers-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-doctors-colony",
+      "name": "Doctors Colony",
+      "localityId": "locality-034-doctors-colony",
+      "wardId": "ward-034-doctors-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-high-court-colony",
+      "name": "High Court Colony",
+      "localityId": "locality-048-high-court-colony",
+      "wardId": "ward-048-high-court-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-mch-colony",
+      "name": "MCH Colony",
+      "localityId": "locality-092-mch-colony",
+      "wardId": "ward-092-mch-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-nizam-colony",
+      "name": "Nizam Colony",
+      "localityId": "locality-129-nizam-colony",
+      "wardId": "ward-129-nizam-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-ou-colony",
+      "name": "OU Colony",
+      "localityId": "locality-224-ou-colony",
+      "wardId": "ward-224-ou-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-vijayanagar-colony",
+      "name": "Vijayanagar Colony",
+      "localityId": "locality-143-vijayanagar-colony",
+      "wardId": "ward-143-vijayanagar-colony",
+      "pinCodes": [
+        "500057"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-venkateshwara-colony",
+      "name": "Venkateshwara Colony",
+      "localityId": "locality-216-venkateshwara-colony",
+      "wardId": "ward-216-venkateshwara-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-srinagar-colony",
+      "name": "Srinagar Colony",
+      "localityId": "locality-207-srinagar-colony",
+      "wardId": "ward-207-srinagar-colony",
+      "pinCodes": [
+        "500073"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-ag-colony",
+      "name": "AG Colony",
+      "localityId": "locality-209-ag-colony",
+      "wardId": "ward-209-ag-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-jp-colony",
+      "name": "JP Colony",
+      "localityId": "locality-267-jp-colony",
+      "wardId": "ward-267-jp-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-bhagya-nagar-colony",
+      "name": "Bhagya Nagar Colony",
+      "localityId": "locality-244-bhagya-nagar-colony",
+      "wardId": "ward-244-bhagya-nagar-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-allwyn-colony",
+      "name": "Allwyn Colony",
+      "localityId": "locality-246-allwyn-colony",
+      "wardId": "ward-246-allwyn-colony",
+      "pinCodes": [],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-vivekananda-nagar-colony",
+      "name": "Vivekananda Nagar Colony",
+      "localityId": "locality-247-vivekananda-nagar-colony",
+      "wardId": "ward-247-vivekananda-nagar-colony",
+      "pinCodes": [
+        "500018",
+        "500072"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-kphb-colony",
+      "name": "KPHB Colony",
+      "localityId": "locality-252-kphb-colony",
+      "wardId": "ward-252-kphb-colony",
+      "pinCodes": [
+        "500085"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "go-ms-292-2025",
+        "publisher": "Government of Telangana, Metropolitan Area & Urban Development Department",
+        "title": "G.O.Ms.No.292 — GHMC reorganisation into 12 zones and 60 circles",
+        "url": "https://www.thehansindia.com/pdf_upload/gomsno292-zones-circles-ghmc-2220-1611869.pdf",
+        "issuedAt": "2025-12-24",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-aphb-colony-moulali",
+      "name": "Aphb Colony Moulali",
+      "localityId": "postal-aphb-colony-moulali",
+      "wardId": null,
+      "pinCodes": [
+        "500040"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-bharat-nagar-colony",
+      "name": "Bharat Nagar Colony",
+      "localityId": "postal-bharat-nagar-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500018"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-chaithanyapuri-colony",
+      "name": "Chaithanyapuri Colony",
+      "localityId": "postal-chaithanyapuri-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500060"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-chitrapuri-colony",
+      "name": "Chitrapuri Colony",
+      "localityId": "postal-chitrapuri-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500104"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-dilsukhnagar-colony",
+      "name": "Dilsukhnagar Colony",
+      "localityId": "postal-dilsukhnagar-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500060"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-fathenagar-colony",
+      "name": "Fathenagar Colony",
+      "localityId": "postal-fathenagar-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500018"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-i-m-colony",
+      "name": "I.M.Colony",
+      "localityId": "postal-i-m-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500082"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-jai-jawan-colony",
+      "name": "Jai Jawan Colony",
+      "localityId": "postal-jai-jawan-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500103"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-jj-nagar-colony",
+      "name": "JJ Nagar Colony",
+      "localityId": "postal-jj-nagar-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500087"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-malakpet-colony",
+      "name": "Malakpet Colony",
+      "localityId": "postal-malakpet-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500036"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-p-and-t-colony",
+      "name": "P & T Colony",
+      "localityId": "postal-p-and-t-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500060"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-saidabad-colony",
+      "name": "Saidabad Colony",
+      "localityId": "postal-saidabad-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500059"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-santoshnagar-colony",
+      "name": "Santoshnagar Colony",
+      "localityId": "postal-santoshnagar-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500059"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-snehapuri-colony",
+      "name": "Snehapuri Colony",
+      "localityId": "postal-snehapuri-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500076"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "colony-sripuram-colony",
+      "name": "Sripuram Colony",
+      "localityId": "postal-sripuram-colony",
+      "wardId": null,
+      "pinCodes": [
+        "500036"
+      ],
+      "verification_status": "verified-as-post-office-name",
+      "note": "The name comes from an India Post office. No GHMC colony-to-ward map was published for the 2025 wards, so this is not an extra page and is not attached to a ward unless the office name already matches that ward.",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    }
+  ],
+  "apartments": [],
+  "note": "No official source in this project publishes apartment or gated-community names tied to the 2025 GHMC wards. None were invented."
+}

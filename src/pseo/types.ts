@@ -35,6 +35,9 @@ export type Locality = {
   postOffices: PostOffice[];
   sourceId: string;
   verified: boolean;
+  /** Present when India Post places the locality outside GHMC. Ward records stay unclassified here and carry ward, circle and zone instead. */
+  jurisdiction?: string;
+  aliases?: string[];
 };
 
 export type ProgrammaticService = {

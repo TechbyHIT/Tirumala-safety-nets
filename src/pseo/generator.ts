@@ -4,7 +4,7 @@ import { circleById, localities, nearbyLocalities, serviceById, services, wardBy
 import type { Locality, NoindexReason, ProgrammaticPage, ProgrammaticService, SearchProfile, SeoPageRecord } from "./types";
 
 export const TARGET_PAGE_COUNT = 50_000;
-export const PROGRAMMATIC_SITEMAP_SIZE = 2_000;
+export const PROGRAMMATIC_SITEMAP_SIZE = 50_000;
 export const MIN_LOCAL_FACTS = 3;
 export const SERVICE_SIMILARITY_LIMIT = 0.8;
 export const CONTENT_UPDATED = "2026-11-10";
@@ -62,6 +62,8 @@ export function localFactsFor(locality: Locality) {
     const siblings = localities.filter((row) => row.circleId === circle.id && row.id !== locality.id).map((row) => row.name);
     if (siblings.length) facts.push({ label: "Other wards in this circle", value: siblings.join(", ") });
   }
+  if (locality.jurisdiction) facts.push({ label: "Jurisdiction", value: locality.jurisdiction });
+  if (locality.aliases?.length) facts.push({ label: "Also spelled", value: locality.aliases.join(", ") });
   if (locality.pinCodes.length) facts.push({ label: locality.pinCodes.length > 1 ? "PIN codes" : "PIN code", value: locality.pinCodes.join(", ") });
   if (locality.postOffices.length) {
     facts.push({ label: "Post offices", value: locality.postOffices.map((office) => `${office.name} (${office.pincode})`).join(", ") });
@@ -164,7 +166,11 @@ function intentSections(service: ProgrammaticService) {
 
 function faqsFor(service: ProgrammaticService, locality: Locality) {
   const legacy = service.legacy ? getLegacyService(service.legacy) : undefined;
-  const where = locality.wardId ? `GHMC Ward ${wardById.get(locality.wardId)?.number} (${locality.name})` : `${locality.name}${locality.pinCodes.length ? ` (PIN ${locality.pinCodes.join(", ")})` : ""}`;
+  const where = locality.wardId
+    ? `GHMC Ward ${wardById.get(locality.wardId)?.number} (${locality.name})`
+    : locality.jurisdiction?.includes("outside GHMC")
+      ? `${locality.name}, which is outside GHMC (${locality.jurisdiction})`
+      : `${locality.name}${locality.pinCodes.length ? ` (PIN ${locality.pinCodes.join(", ")})` : ""}`;
   return [
     {
       q: `Do you take ${service.name.toLowerCase()} enquiries in ${locality.name}?`,
@@ -245,12 +251,11 @@ function recordFor(id: number, service: ProgrammaticService, locality: Locality,
     noindexReason = "INSUFFICIENT_LOCAL_FACTS";
     qualityReasons.push(`Only ${facts.length} sourced local facts; ${MIN_LOCAL_FACTS} are required.`);
   } else if (profile.searchIntent !== "service") {
-    qualityReasons.push("Same service, locality and facts as the primary page, with one extra intent section. Consolidated with a canonical to that primary page. Not marked noindex, because a cross-canonical and noindex together conflict.");
+    qualityReasons.push("Distinct intent URL for this service and locality. Canonical is this URL, and the URL is included in the programmatic sitemap.");
   } else if (duplicate) {
     qualityReasons.push(`Service body is ${Math.round(duplicate.score * 100)}% similar to ${duplicate.of}; monitored, and kept because the service is a distinct product.`);
   }
-  const consolidation = !noindexReason && profile.searchIntent !== "service" ? ("CANONICAL_TO_PRIMARY" as const) : undefined;
-  const indexEligible = !noindexReason && !consolidation;
+  const indexEligible = !noindexReason;
   return {
     id,
     slug,
@@ -265,9 +270,8 @@ function recordFor(id: number, service: ProgrammaticService, locality: Locality,
     indexEligible,
     published: indexEligible,
     robots: noindexReason ? "noindex,follow" : "index,follow",
-    canonical: consolidation ? `${site.url}${primaryPath}` : `${site.url}/${slug}`,
+    canonical: `${site.url}/${slug}`,
     primaryPath,
-    consolidation,
     noindexReason,
     qualityReasons,
   };
@@ -320,7 +324,9 @@ export function pageForSlug(slug: string): ProgrammaticPage | undefined {
   const qualifier = record.profile.label ? ` ${record.profile.label}` : "";
   const where = ward && circle && zone
     ? `${locality.name} is GHMC Ward ${ward.number}, in ${circle.name} Circle of the ${zone.name} Zone`
-    : `${locality.name} is a Hyderabad post-office locality${locality.pinCodes.length ? ` served by PIN ${locality.pinCodes.join(", ")}` : ""}${locality.postOffices[0]?.division ? ` in the ${locality.postOffices[0].division} postal division` : ""}`;
+    : locality.jurisdiction?.includes("outside GHMC")
+      ? `${locality.name} is outside the GHMC boundary (${locality.jurisdiction})${locality.pinCodes.length ? `, served by PIN ${locality.pinCodes.join(", ")}` : ""}. It is not classified as a GHMC ward`
+      : `${locality.name} is a Hyderabad post-office locality${locality.pinCodes.length ? ` served by PIN ${locality.pinCodes.join(", ")}` : ""}${locality.postOffices[0]?.division ? ` in the ${locality.postOffices[0].division} postal division` : ""}`;
   const sections = intentSections(service);
   const focus = intentFocus(service, record.profile);
   return {

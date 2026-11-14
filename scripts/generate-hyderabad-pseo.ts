@@ -15,7 +15,9 @@ import {
   TARGET_PAGE_COUNT,
 } from "../src/pseo/generator";
 import { circlePath, pinPath, wardPath, zonePath } from "../src/pseo/paths";
-import { allSitemapNames, imageCount, urlsForSitemap } from "../src/seo/sitemaps";
+import { canonicalOrigin } from "../src/config/site";
+import { legacyRedirect } from "../src/seo/legacy";
+import { allSitemapNames, imageCount, urlsForSitemap, urlset } from "../src/seo/sitemaps";
 
 const checkOnly = process.argv.includes("--check");
 const writeRecords = process.argv.includes("--write-records");
@@ -134,7 +136,7 @@ for (const service of services) {
   const primaryText = pageText(primary.slug);
   for (const variant of primary.variants) {
     const variantRecord = recordForSlug(variant.href.slice(1));
-    if (variantRecord?.consolidation) variantScores.push(similarity(primaryText, pageText(variant.href.slice(1))));
+    if (variantRecord && variantRecord.slug !== primary.slug) variantScores.push(similarity(primaryText, pageText(variant.href.slice(1))));
   }
 }
 const variantSimilarity = variantScores.length
@@ -160,7 +162,28 @@ for (const name of sitemapNames) {
     if (record && !record.indexEligible) failures.push(`sitemap ${name}: lists noindex ${url}`);
   }
 }
-const programmaticInSitemaps = [...sitemapUrls.values()].filter((name) => name.startsWith("programmatic-")).length;
+const programmaticInSitemaps = [...sitemapUrls.values()].filter((name) => name === "programmatic" || name.startsWith("programmatic-")).length;
+const sitemapPathSet = new Set(sitemapUrls.keys());
+const missingProgrammatic = records.filter((record) => record.published && !sitemapPathSet.has(record.path));
+const invalidProgrammatic = records.filter((record) => {
+  const redirect = legacyRedirect(record.path);
+  return Boolean(record.noindexReason) || !record.canonical.endsWith(record.path) || (redirect && redirect !== record.path) || !record.path.startsWith("/");
+});
+let xmlInvalid = 0;
+let largestBytes = 0;
+for (const name of sitemapNames) {
+  if (name === "images") continue;
+  const paths = urlsForSitemap(name) ?? [];
+  const xml = urlset(paths, canonicalOrigin);
+  const bytes = Buffer.byteLength(xml);
+  largestBytes = Math.max(largestBytes, bytes);
+  if (!xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>') || !xml.includes('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"')) xmlInvalid += 1;
+  const stripped = xml.replace(/&(?:amp|lt|gt|quot|apos);/g, "");
+  if (stripped.includes("&") || bytes > 50 * 1024 * 1024) xmlInvalid += 1;
+}
+const coreCount = urlsForSitemap("core")?.length ?? 0;
+const serviceCount = urlsForSitemap("services")?.length ?? 0;
+const locationCount = ["locations", "zones", "wards", "localities", "legacy-locations"].reduce((sum, name) => sum + (urlsForSitemap(name)?.length ?? 0), 0);
 
 const noindexByReason: Record<string, { count: number; sample: string[] }> = {};
 for (const record of records) {
@@ -208,6 +231,10 @@ check(
 check("published gate", records.every((row) => !row.published || row.indexEligible), "published non-eligible page");
 check("every primary combination generated", missing.primaryCombinationsOutsideTarget === 0, String(missing.primaryCombinationsOutsideTarget));
 check("programmatic sitemap matches published", programmaticInSitemaps === published.length, `${programmaticInSitemaps} != ${published.length}`);
+check("programmatic sitemap is 50000", programmaticInSitemaps === TARGET_PAGE_COUNT, String(programmaticInSitemaps));
+check("no programmatic url missing from sitemap", missingProgrammatic.length === 0, missingProgrammatic.slice(0, 5).map((row) => row.path).join(", "));
+check("no invalid programmatic url", invalidProgrammatic.length === 0, invalidProgrammatic.slice(0, 5).map((row) => row.path).join(", "));
+check("sitemap xml valid", xmlInvalid === 0, String(xmlInvalid));
 check("sitemap URLs unique", repeatedSitemapUrls === 0, String(repeatedSitemapUrls));
 check("sitemap limit", largestSitemap <= 50_000, String(largestSitemap));
 check("no broken internal links", brokenLinks.length === 0, brokenLinks.slice(0, 5).join(", "));
@@ -255,8 +282,24 @@ const report = {
     urls: sitemapUrls.size,
     byFile: Object.fromEntries(sitemapNames.map((name) => [name, urlsForSitemap(name)?.length ?? 0])),
     largest: largestSitemap,
+    largestBytes,
     imageSitemapImages: imageCount(),
     firstProgrammatic: recordsForSitemap(0)[0]?.path,
+    validation: {
+      programmaticGenerated: records.length,
+      programmaticInSitemap: programmaticInSitemaps,
+      coreUrls: coreCount,
+      serviceUrls: serviceCount,
+      locationUrls: locationCount,
+      uniqueSitemapUrls: sitemapUrls.size,
+      sitemapFiles: sitemapNames.length,
+      programmaticFiles: programmaticSitemapCount(),
+      missingUrls: missingProgrammatic.length,
+      duplicateUrls: repeatedSitemapUrls,
+      invalidUrls: invalidProgrammatic.length,
+      httpErrors: null,
+      xmlStatus: xmlInvalid === 0 ? "valid" : "invalid",
+    },
   },
   failures,
 };

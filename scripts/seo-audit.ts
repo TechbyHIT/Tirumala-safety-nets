@@ -1,7 +1,8 @@
 import { posts } from "../src/data/blog";
 import { pageAt } from "../src/seo/catalog";
 import { publishedRecords, registryByPath } from "../src/seo/indexable";
-import { absoluteLoc, sitemapOrigin, urlsFor, urlset, xmlEscape } from "../src/seo/sitemaps";
+import { galleryPhotos, viewSrc } from "../src/data/gallery";
+import { absoluteLoc, imageUrlset, sitemapOrigin, urlsFor, urlset, xmlEscape } from "../src/seo/sitemaps";
 import { TEMPLATE_VERSION } from "../src/seo/types";
 import { readRegistry } from "../src/seo/registry";
 
@@ -62,7 +63,15 @@ const publicOrigin = sitemapOrigin(new Request("https://tirumalasafetynetsinvisi
 check("public sitemap origin", publicOrigin === "https://tirumalasafetynetsinvisiblegrills.in", publicOrigin);
 const publicXml = urlset(["/services"], publicOrigin);
 check("public sitemap loc", publicXml.includes("<loc>https://tirumalasafetynetsinvisiblegrills.in/services</loc>"), publicXml.split("\n")[2] ?? publicXml);
+const homeXml = urlset(["/"], publicOrigin);
+check("homepage sitemap loc matches canonical", homeXml.includes(`<loc>${publicOrigin}</loc>`) && !homeXml.includes(`<loc>${publicOrigin}/</loc>`), homeXml);
 check("blog posts included", posts.every((post) => urlsFor("core").includes(`/blog/${post.slug}`)), "a blog post is missing from the core sitemap");
+const imageXml = imageUrlset(publicOrigin);
+check(
+  "image sitemap matches gallery page",
+  galleryPhotos.length > 0 && galleryPhotos.length <= 1000 && galleryPhotos.every((photo) => imageXml.includes(`<image:loc>${absoluteLoc(viewSrc(photo.src), publicOrigin)}</image:loc>`)),
+  "image:loc does not use the /gallery/view files shown on the page",
+);
 
 const review = records.find((record) => record.status === "review");
 if (review) {

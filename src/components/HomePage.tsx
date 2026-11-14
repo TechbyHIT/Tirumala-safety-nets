@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site, telHref, whatsappHref } from "@/config/site";
-import { galleryCards } from "@/data/gallery";
+import { featuredPhoto, galleryCards, viewSrc } from "@/data/gallery";
 import { generalFaqs } from "@/data/faq";
 import { steps } from "@/data/materials";
 import { citiesIn, regions } from "@/data/cities";
@@ -12,62 +12,95 @@ import { FaqStatic, GoldLink, SectionTitle } from "./ui";
 
 const pills = ["Site inspection", "Written quote", "Balcony nets", "Invisible grills", "Apartments and villas", "All of Hyderabad"];
 
-const heroPhotos = [
-  {
-    src: "/gallery/view/0136daf3cc18.webp",
-    alt: "Invisible grill cables across a high balcony in Hyderabad, with the city still visible",
-    label: "Invisible grills",
-  },
-  {
-    src: "/gallery/view/095b7f06fb79.webp",
-    alt: "Safety net fitted across a balcony railing, with the view and daylight still open",
-    label: "Safety nets",
-  },
-];
+const heroServices = [
+  ["invisible-grills", "Invisible grills"],
+  ["balcony-safety-nets", "Safety nets"],
+  ["children-safety-nets", "Children nets"],
+  ["pet-safety-nets", "Pet nets"],
+  ["duct-area-nets", "Duct nets"],
+  ["anti-bird-spikes", "Bird spikes"],
+  ["cloth-hangers", "Cloth hangers"],
+  ["cricket-nets", "Sports nets"],
+  ["mosquito-nets", "Mosquito nets"],
+] as const;
+
+const heroStrip = heroServices.flatMap(([service, label]) => {
+  const photo = featuredPhoto(`hero-scroll:${service}`, service);
+  if (!photo) return [];
+  return [{ id: photo.id, src: viewSrc(photo.src), label }];
+}).filter((photo, index, photos) => photos.findIndex((item) => item.id === photo.id) === index);
+
+function HeroTrack({ photos, priority = false }: { photos: typeof heroStrip; priority?: boolean }) {
+  const loop = [...photos, ...photos];
+  return (
+    <div className="hero-track flex w-full flex-col">
+      {loop.map((photo, index) => (
+        <figure key={`${photo.id}-${index}`} className="relative h-[calc(100svh-6.75rem)] w-full shrink-0 lg:h-[78vh]">
+          <Image
+            src={photo.src}
+            alt=""
+            fill
+            priority={priority && index === 0}
+            className="object-cover"
+            sizes="(min-width: 1024px) 56vw, 100vw"
+          />
+          <figcaption className="absolute bottom-4 left-4 hidden rounded-full bg-brand-950/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white ring-1 ring-white/25 lg:inline-flex">
+            {photo.label}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+}
 
 export function HomePage() {
   const wa = whatsappHref("Hello Tirumala Safety Nets, I would like a site inspection in Hyderabad.");
   return (
     <>
-      <section className="grid bg-brand-950 text-white lg:min-h-[88vh] lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="order-2 flex flex-col justify-center px-4 py-14 sm:px-8 lg:order-1 lg:px-10 lg:py-20">
-          <p className="inline-flex w-fit rounded-full bg-cta-500 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-950">
+      <section className="relative isolate min-h-[calc(100svh-6.75rem)] overflow-hidden bg-brand-950 text-white lg:grid lg:min-h-[88vh] lg:grid-cols-[minmax(20rem,0.86fr)_1.14fr]">
+        <div className="absolute inset-0 lg:relative lg:order-2 lg:min-h-[88vh]">
+          <div className="hero-marquee absolute inset-0 overflow-hidden" aria-hidden="true">
+            <HeroTrack photos={heroStrip} priority />
+          </div>
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/25 to-black/70 lg:hidden" />
+        </div>
+        <div className="relative z-10 flex min-h-[calc(100svh-6.75rem)] flex-col justify-end px-4 pb-24 pt-16 sm:px-8 lg:order-1 lg:min-h-0 lg:justify-center lg:bg-brand-950 lg:px-10 lg:py-20">
+          <p className="inline-flex w-fit items-center gap-2 rounded-full bg-black/45 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white ring-1 ring-white/25 lg:bg-cta-500 lg:text-brand-950 lg:ring-0">
+            <span className="h-2 w-2 rounded-full bg-cta-500 lg:hidden" aria-hidden="true" />
             Safety nets for every neighbourhood in Hyderabad
           </p>
-          <h1 className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] sm:text-6xl">
+          <h1 className="mt-4 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] [text-shadow:0_2px_18px_rgb(0_0_0_/_0.55)] sm:text-5xl lg:text-6xl lg:[text-shadow:none]">
             Tirumala Safety Nets — premium safety nets & invisible grills
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-white/85 sm:text-lg">
+          <p className="mt-4 max-w-2xl text-base leading-7 text-white/90 [text-shadow:0_1px_10px_rgb(0_0_0_/_0.45)] sm:text-lg lg:[text-shadow:none]">
             Balcony safety nets, pigeon nets, invisible grills, children and pet nets, cloth hangers and sports nets for apartments, villas and commercial buildings across Hyderabad and Secunderabad.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <GoldLink href="/contact">Get a Quote →</GoldLink>
-            {wa ? (
-              <a href={wa} className="inline-flex min-h-11 items-center justify-center rounded-full bg-success-500 px-6 py-3 text-sm font-semibold text-white hover:bg-success-600">
-                WhatsApp Now
-              </a>
-            ) : null}
-            <a href={telHref()} className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">
+          <div className="mt-6 flex flex-col gap-3 lg:mt-8 lg:flex-row lg:flex-wrap">
+            <a href={telHref()} className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-cta-500 px-6 py-3 text-sm font-semibold text-brand-950 hover:bg-cta-600 lg:hidden">
               Call Now
             </a>
+            <Link href="/contact" className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-black/45 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-black/60 lg:hidden">
+              Get a Quote →
+            </Link>
+            <div className="hidden gap-3 lg:flex">
+              <GoldLink href="/contact">Get a Quote →</GoldLink>
+              {wa ? (
+                <a href={wa} className="inline-flex min-h-11 items-center justify-center rounded-full bg-success-500 px-6 py-3 text-sm font-semibold text-white hover:bg-success-600">
+                  WhatsApp Now
+                </a>
+              ) : null}
+              <a href={telHref()} className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">
+                Call Now
+              </a>
+            </div>
           </div>
-          <ul className="mt-8 flex max-w-3xl flex-wrap gap-2">
+          <ul className="mt-6 grid grid-cols-2 gap-x-3 gap-y-2 lg:mt-8 lg:flex lg:max-w-3xl lg:flex-wrap lg:gap-2">
             {pills.map((pill) => (
-              <li key={pill} className="rounded-full bg-black/35 px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/20">
+              <li key={pill} className="text-sm font-medium text-white lg:rounded-full lg:bg-black/35 lg:px-3 lg:py-1.5 lg:text-xs lg:font-semibold lg:ring-1 lg:ring-white/20">
                 ✓ {pill}
               </li>
             ))}
           </ul>
-        </div>
-        <div className="order-1 grid min-h-[70vh] grid-cols-1 sm:grid-cols-2 lg:order-2 lg:min-h-full lg:grid-cols-1">
-          {heroPhotos.map((photo) => (
-            <figure key={photo.label} className="relative min-h-72">
-              <Image src={photo.src} alt={photo.alt} fill priority className="object-cover" sizes="(min-width: 1024px) 46vw, 100vw" />
-              <figcaption className="absolute bottom-4 left-4 rounded-full bg-brand-950/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-white ring-1 ring-white/25">
-                {photo.label}
-              </figcaption>
-            </figure>
-          ))}
         </div>
       </section>
 

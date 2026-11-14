@@ -3,8 +3,8 @@ import { posts } from "@/data/blog";
 import { libraryItems } from "@/data/library";
 import { canonicalOrigin, site } from "@/config/site";
 import { circles, pinCodes, services as targetServices, wards, zones } from "@/pseo/database";
-import { galleryPhotos } from "@/data/gallery";
-import { CONTENT_UPDATED, programmaticSitemapCount, recordForSlug, recordsForSitemap } from "@/pseo/generator";
+import { galleryPhotos, viewSrc } from "@/data/gallery";
+import { CONTENT_UPDATED, programmaticSitemapCount, publishedProgrammaticRecords, recordForSlug, recordsForSitemap } from "@/pseo/generator";
 import { circlePath, pinPath, wardPath, zonePath } from "@/pseo/paths";
 import { publishedRecords } from "@/seo/indexable";
 import { servicePath, statePath } from "./urls";
@@ -42,7 +42,9 @@ export function sitemapOrigin(request: Request) {
 }
 
 export function absoluteLoc(path: string, origin = site.url) {
-  return `${origin.replace(/\/$/, "")}${path}`;
+  const base = origin.replace(/\/$/, "");
+  if (path === "/" || path === "") return base;
+  return `${base}${path}`;
 }
 
 export function urlsFor(group: FixedGroup): string[] {
@@ -62,11 +64,24 @@ export function urlsFor(group: FixedGroup): string[] {
   return legacyIndexable.filter((path) => path.startsWith("/locations/hyderabad/"));
 }
 
+export const publicSitemaps = ["pages", "programmatic", "images"] as const;
+export type PublicSitemap = (typeof publicSitemaps)[number];
+
+export function pageSitemapPaths() {
+  const paths = fixedGroups.filter((group) => group !== "images").flatMap((group) => urlsFor(group));
+  return [...new Set(paths)];
+}
+
+export function programmaticSitemapPaths() {
+  return publishedProgrammaticRecords().map((record) => record.path);
+}
+
 export function programmaticSitemapNames() {
   return Array.from({ length: programmaticSitemapCount() }, (_, index) => `programmatic-${String(index + 1).padStart(3, "0")}`);
 }
 
 export function programmaticUrlsFor(name: string) {
+  if (name === "programmatic") return programmaticSitemapPaths();
   const match = /^programmatic-(\d{3})$/.exec(name);
   if (!match) return undefined;
   const shard = Number(match[1]) - 1;
@@ -79,12 +94,23 @@ export function imageCount() {
 }
 
 export function allSitemapNames() {
-  return [...fixedGroups.filter((group) => group === "images" || urlsFor(group).length > 0), ...programmaticSitemapNames()];
+  return [...publicSitemaps];
+}
+
+export function sitemapIndex(origin = site.url) {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${allSitemapNames()
+  .map((name) => `  <sitemap><loc>${xmlEscape(absoluteLoc(`/sitemaps/${name}.xml`, origin))}</loc></sitemap>`)
+  .join("\n")}
+</sitemapindex>`;
 }
 
 export function urlsForSitemap(name: string) {
+  if (name === "pages") return pageSitemapPaths();
+  if (name === "programmatic" || name.startsWith("programmatic-")) return programmaticUrlsFor(name);
   if ((fixedGroups as readonly string[]).includes(name)) return urlsFor(name as FixedGroup);
-  return programmaticUrlsFor(name);
+  return undefined;
 }
 
 export function urlset(paths: string[], origin = site.url) {
@@ -104,7 +130,10 @@ ${paths
 
 export function imageUrlset(origin = site.url) {
   const images = galleryPhotos
-    .map((photo) => `    <image:image><image:loc>${xmlEscape(absoluteLoc(photo.src, origin))}</image:loc><image:caption>${xmlEscape(photo.alt)}</image:caption></image:image>`)
+    .map((photo) => {
+      const src = viewSrc(photo.src);
+      return `    <image:image><image:loc>${xmlEscape(absoluteLoc(src, origin))}</image:loc><image:caption>${xmlEscape(photo.alt)}</image:caption></image:image>`;
+    })
     .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">

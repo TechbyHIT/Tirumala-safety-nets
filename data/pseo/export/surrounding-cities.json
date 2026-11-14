@@ -1,0 +1,373 @@
+{
+  "localities": [
+    {
+      "id": "postal-chevella",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "name": "Chevella",
+      "slug": "chevella",
+      "kind": "post-office",
+      "zone": "",
+      "zoneId": "",
+      "circle": "",
+      "circleId": "",
+      "ward": "",
+      "wardNumber": "",
+      "wardId": "",
+      "pinCodes": [
+        "501503"
+      ],
+      "jurisdiction": "Ranga Reddy district, outside GHMC",
+      "aliases": [],
+      "directoryPath": "/locations/hyderabad/pin/501503",
+      "primaryServicePath": "/invisible-grills-in-chevella",
+      "verification_status": "verified",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "postal-ibrahimpatnam",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "name": "Ibrahimpatnam",
+      "slug": "ibrahimpatnam",
+      "kind": "post-office",
+      "zone": "",
+      "zoneId": "",
+      "circle": "",
+      "circleId": "",
+      "ward": "",
+      "wardNumber": "",
+      "wardId": "",
+      "pinCodes": [
+        "501506"
+      ],
+      "jurisdiction": "Ibrahimpatnam, Ranga Reddy district, outside GHMC",
+      "aliases": [],
+      "directoryPath": "/locations/hyderabad/pin/501506",
+      "primaryServicePath": "/invisible-grills-in-ibrahimpatnam",
+      "verification_status": "verified",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "postal-isnapur",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "name": "Isnapur",
+      "slug": "isnapur",
+      "kind": "post-office",
+      "zone": "",
+      "zoneId": "",
+      "circle": "",
+      "circleId": "",
+      "ward": "",
+      "wardNumber": "",
+      "wardId": "",
+      "pinCodes": [
+        "502307"
+      ],
+      "jurisdiction": "Sangareddy district, outside GHMC",
+      "aliases": [],
+      "directoryPath": "/locations/hyderabad/pin/502307",
+      "primaryServicePath": "/invisible-grills-in-isnapur",
+      "verification_status": "verified",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "postal-kollur",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "name": "Kollur",
+      "slug": "kollur",
+      "kind": "post-office",
+      "zone": "",
+      "zoneId": "",
+      "circle": "",
+      "circleId": "",
+      "ward": "",
+      "wardNumber": "",
+      "wardId": "",
+      "pinCodes": [
+        "502300"
+      ],
+      "jurisdiction": "Patancheru, Sangareddy district, outside GHMC",
+      "aliases": [],
+      "directoryPath": "/locations/hyderabad/pin/502300",
+      "primaryServicePath": "/invisible-grills-in-kollur",
+      "verification_status": "verified",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "postal-mangalpalli",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "name": "Mangalpalli",
+      "slug": "mangalpalli",
+      "kind": "post-office",
+      "zone": "",
+      "zoneId": "",
+      "circle": "",
+      "circleId": "",
+      "ward": "",
+      "wardNumber": "",
+      "wardId": "",
+      "pinCodes": [
+        "501510"
+      ],
+      "jurisdiction": "Ranga Reddy district, outside GHMC",
+      "aliases": [
+        "mangalpally"
+      ],
+      "directoryPath": "/locations/hyderabad/pin/501510",
+      "primaryServicePath": "/invisible-grills-in-mangalpalli",
+      "verification_status": "verified",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "postal-moinabad",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "name": "Moinabad",
+      "slug": "moinabad",
+      "kind": "post-office",
+      "zone": "",
+      "zoneId": "",
+      "circle": "",
+      "circleId": "",
+      "ward": "",
+      "wardNumber": "",
+      "wardId": "",
+      "pinCodes": [
+        "501504"
+      ],
+      "jurisdiction": "Ranga Reddy district, outside GHMC",
+      "aliases": [],
+      "directoryPath": "/locations/hyderabad/pin/501504",
+      "primaryServicePath": "/invisible-grills-in-moinabad",
+      "verification_status": "verified",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "postal-mokila",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "name": "Mokila",
+      "slug": "mokila",
+      "kind": "post-office",
+      "zone": "",
+      "zoneId": "",
+      "circle": "",
+      "circleId": "",
+      "ward": "",
+      "wardNumber": "",
+      "wardId": "",
+      "pinCodes": [
+        "501203"
+      ],
+      "jurisdiction": "Ranga Reddy district, outside GHMC",
+      "aliases": [],
+      "directoryPath": "/locations/hyderabad/pin/501203",
+      "primaryServicePath": "/invisible-grills-in-mokila",
+      "verification_status": "verified",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "postal-pocharam-ibrahimpatnam",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "name": "Pocharam (Ibrahimpatnam)",
+      "slug": "pocharam-ibrahimpatnam",
+      "kind": "post-office",
+      "zone": "",
+      "zoneId": "",
+      "circle": "",
+      "circleId": "",
+      "ward": "",
+      "wardNumber": "",
+      "wardId": "",
+      "pinCodes": [
+        "501506"
+      ],
+      "jurisdiction": "Ibrahimpatnam, Ranga Reddy district, outside GHMC. Not GHMC Ward 8 Pocharam in Ghatkesar Circle",
+      "aliases": [],
+      "directoryPath": "/locations/hyderabad/pin/501506",
+      "primaryServicePath": "/invisible-grills-in-pocharam-ibrahimpatnam",
+      "verification_status": "verified",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "postal-sangareddy",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "name": "Sangareddy",
+      "slug": "sangareddy",
+      "kind": "post-office",
+      "zone": "",
+      "zoneId": "",
+      "circle": "",
+      "circleId": "",
+      "ward": "",
+      "wardNumber": "",
+      "wardId": "",
+      "pinCodes": [
+        "502001"
+      ],
+      "jurisdiction": "Sangareddy district, outside GHMC",
+      "aliases": [],
+      "directoryPath": "/locations/hyderabad/pin/502001",
+      "primaryServicePath": "/invisible-grills-in-sangareddy",
+      "verification_status": "verified",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "postal-shankarpalli",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "name": "Shankarpalli",
+      "slug": "shankarpalli",
+      "kind": "post-office",
+      "zone": "",
+      "zoneId": "",
+      "circle": "",
+      "circleId": "",
+      "ward": "",
+      "wardNumber": "",
+      "wardId": "",
+      "pinCodes": [
+        "501203"
+      ],
+      "jurisdiction": "Ranga Reddy district, outside GHMC",
+      "aliases": [
+        "shankarpally"
+      ],
+      "directoryPath": "/locations/hyderabad/pin/501203",
+      "primaryServicePath": "/invisible-grills-in-shankarpalli",
+      "verification_status": "verified",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "postal-vikarabad",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "name": "Vikarabad",
+      "slug": "vikarabad",
+      "kind": "post-office",
+      "zone": "",
+      "zoneId": "",
+      "circle": "",
+      "circleId": "",
+      "ward": "",
+      "wardNumber": "",
+      "wardId": "",
+      "pinCodes": [
+        "501101"
+      ],
+      "jurisdiction": "Vikarabad district, outside GHMC",
+      "aliases": [],
+      "directoryPath": "/locations/hyderabad/pin/501101",
+      "primaryServicePath": "/invisible-grills-in-vikarabad",
+      "verification_status": "verified",
+      "source": {
+        "id": "india-post-pincode-directory",
+        "publisher": "Department of Posts, Government of India (Open Government Data Platform India)",
+        "title": "All India Pincode Directory",
+        "url": "https://data.gov.in/resource/all-india-pincode-directory",
+        "issuedAt": "",
+        "accessedAt": "2026-11-10"
+      }
+    }
+  ],
+  "notFoundInIndiaPostExtract": [
+    "Bhongir",
+    "Bibinagar",
+    "Shadnagar",
+    "Kothur",
+    "Maheshwaram",
+    "Tukkuguda",
+    "Annojiguda",
+    "Tondapally",
+    "Financial District",
+    "Raidurg",
+    "Khajaguda",
+    "Madinaguda",
+    "Marredpally",
+    "Paradise",
+    "Patny",
+    "Punjagutta",
+    "Abids",
+    "Charminar",
+    "Ramanthapur",
+    "Ferozguda",
+    "Sun City",
+    "Osman Sagar"
+  ]
+}

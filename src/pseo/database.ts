@@ -10,6 +10,8 @@ type PostalRow = {
   postOffices: PostOffice[];
   postalDistrict: string;
   matchesWard: boolean;
+  jurisdiction?: string;
+  aliases?: string[];
 };
 
 export const states = hierarchy.states;
@@ -38,6 +40,7 @@ const wardLocalities: Locality[] = (hierarchy.localities as Omit<Locality, "kind
     kind: "ghmc-ward",
     pinCodes: match ? match.pinCodes : [],
     postOffices: match ? match.postOffices : [],
+    aliases: match?.aliases ?? [],
   };
 });
 
@@ -55,6 +58,8 @@ const postOfficeLocalities: Locality[] = postalRows
     postOffices: row.postOffices,
     sourceId: postalSource.id,
     verified: true,
+    jurisdiction: row.jurisdiction,
+    aliases: row.aliases ?? [],
   }));
 
 export const localities: Locality[] = [...wardLocalities, ...postOfficeLocalities];

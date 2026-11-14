@@ -1,0 +1,27 @@
+{
+  "note": "Only postal taluk values that name a specific mandal on an outside-GHMC office are listed. District labels such as Rangareddy and Hyd are not treated as mandals. This is not a Local Government Directory extract.",
+  "mandals": [
+    {
+      "name": "Ibrahimpatnam",
+      "localityIds": [
+        "postal-ibrahimpatnam"
+      ],
+      "source": "India Post taluk field"
+    },
+    {
+      "name": "Sangareddy",
+      "localityIds": [
+        "postal-isnapur",
+        "postal-sangareddy"
+      ],
+      "source": "India Post taluk field"
+    },
+    {
+      "name": "Patancheru",
+      "localityIds": [
+        "postal-kollur"
+      ],
+      "source": "India Post taluk field"
+    }
+  ]
+}

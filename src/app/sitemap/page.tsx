@@ -1,36 +1,89 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/ui";
-import { cities } from "@/data/cities";
 import { services } from "@/data/services";
 import { zones } from "@/pseo/database";
+import { TARGET_PAGE_COUNT } from "@/pseo/generator";
 import { zonePath } from "@/pseo/paths";
-import { absoluteUrl, cityPath, servicePath, statePath } from "@/seo/urls";
+import { imageCount, pageSitemapPaths } from "@/seo/sitemaps";
+import { absoluteUrl, servicePath, statePath } from "@/seo/urls";
 
 export const metadata: Metadata = {
   title: "Sitemap",
-  description: "Hyderabad safety-net pages for Tirumala Safety Nets: services, localities, neighbourhoods and installation guides.",
+  description: "Sitemap for Tirumala Safety Nets: main pages, Hyderabad service pages, and the gallery.",
   alternates: { canonical: absoluteUrl("/sitemap") },
   robots: { index: true, follow: true },
 };
+
+const files = [
+  {
+    href: "/sitemaps.xml",
+    title: "sitemaps.xml",
+    text: "Index. Search engines start here.",
+  },
+  {
+    href: "/sitemaps/pages.xml",
+    title: "pages.xml",
+    text: `Home, services, guides, blog, wards, zones, and locality hubs. ${pageSitemapPaths().length.toLocaleString("en-IN")} URLs.`,
+  },
+  {
+    href: "/sitemaps/programmatic.xml",
+    title: "programmatic.xml",
+    text: `Service and locality pages. ${TARGET_PAGE_COUNT.toLocaleString("en-IN")} URLs.`,
+  },
+  {
+    href: "/sitemaps/images.xml",
+    title: "images.xml",
+    text: `Gallery photographs. ${imageCount().toLocaleString("en-IN")} images.`,
+  },
+];
+
+const mainLinks = [
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/locations", label: "Locations" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/blog", label: "Blog" },
+  { href: "/about", label: "About" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function SitemapPage() {
   return (
     <>
       <PageHero
         eyebrow="Index"
-        title="HTML sitemap"
-        text={`${cities.length} Hyderabad localities and ${cities.reduce((sum, city) => sum + city.areas.length, 0)} neighbourhood pages. Service pages and service-by-locality pages are listed here. Phrase variants and unreviewed neighbourhood combinations stay out of the XML sitemap.`}
+        title="Sitemap"
+        text="One index and three sitemap files. This page lists those files, plus the main sections of the site."
         crumbs={[{ href: "/", label: "Home" }, { label: "Sitemap" }]}
       />
       <div className="mx-auto max-w-6xl space-y-10 px-4 py-12 sm:px-6">
-        <p className="text-sm leading-7 text-brand-800/80">
-          Locality, neighbourhood, service, and service-by-locality URLs are in the XML index.{" "}
-          <a className="font-semibold text-brand-900 underline" href="/sitemap.xml">
-            Open sitemap.xml
-          </a>
-          .
-        </p>
+        <section>
+          <h2 className="font-display text-2xl font-bold">XML sitemaps</h2>
+          <ul className="mt-4 divide-y divide-brand-900/10 border-y border-brand-900/10">
+            {files.map((file) => (
+              <li key={file.href} className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3">
+                <a className="font-semibold text-brand-900 underline" href={file.href}>
+                  {file.title}
+                </a>
+                <span className="text-sm text-brand-800/80">{file.text}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+        <section>
+          <h2 className="font-display text-2xl font-bold">Main pages</h2>
+          <ul className="mt-3 columns-1 gap-x-8 text-sm sm:columns-2 lg:columns-3">
+            {mainLinks.map((item) => (
+              <li key={item.href} className="mb-1.5 break-inside-avoid">
+                <Link href={item.href} className="hover:text-cta-600">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
         <section>
           <h2 className="font-display text-2xl font-bold">Services</h2>
           <ul className="mt-3 columns-1 gap-x-8 text-sm sm:columns-2 lg:columns-3">
@@ -50,22 +103,11 @@ export default function SitemapPage() {
               Entire Hyderabad
             </Link>
           </p>
-          <h3 className="mt-6 font-display text-lg font-bold">GHMC zones</h3>
           <ul className="mt-3 columns-1 gap-x-8 text-sm sm:columns-2 lg:columns-3">
             {zones.map((zone) => (
               <li key={zone.id} className="mb-1.5 break-inside-avoid">
                 <Link href={zonePath(zone.id)} className="hover:text-cta-600">
                   {zone.name} Zone
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <h3 className="mt-6 font-display text-lg font-bold">Neighbourhood guides</h3>
-          <ul className="mt-3 columns-1 gap-x-8 text-sm sm:columns-2 lg:columns-3">
-            {cities.map((city) => (
-              <li key={city.slug} className="mb-1.5 break-inside-avoid">
-                <Link href={cityPath(city.slug)} className="hover:text-cta-600">
-                  {city.name} ({city.areas.length} neighbourhoods)
                 </Link>
               </li>
             ))}

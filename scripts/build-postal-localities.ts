@@ -61,11 +61,32 @@ function wardSlugFor(slug: string) {
   return wardByCompact.get(slug.replace(/-/g, ""));
 }
 
+// Named in the service area and present in this India Post extract, but not GHMC wards.
+// Matched by cleaned name plus PIN so a same-name office in another taluk is not pulled in.
+const surroundingByKey = new Map<string, { jurisdiction: string; aliases: string[]; slug?: string; name?: string }>([
+  ["chevella:501503", { jurisdiction: "Ranga Reddy district, outside GHMC", aliases: [] }],
+  ["ibrahimpatnam:501506", { jurisdiction: "Ibrahimpatnam, Ranga Reddy district, outside GHMC", aliases: [] }],
+  ["isnapur:502307", { jurisdiction: "Sangareddy district, outside GHMC", aliases: [] }],
+  ["kollur:502300", { jurisdiction: "Patancheru, Sangareddy district, outside GHMC", aliases: [] }],
+  ["mangalpalli:501510", { jurisdiction: "Ranga Reddy district, outside GHMC", aliases: ["mangalpally"] }],
+  ["moinabad:501504", { jurisdiction: "Ranga Reddy district, outside GHMC", aliases: [] }],
+  ["mokila:501203", { jurisdiction: "Ranga Reddy district, outside GHMC", aliases: [] }],
+  ["pocharam:501506", { jurisdiction: "Ibrahimpatnam, Ranga Reddy district, outside GHMC. Not GHMC Ward 8 Pocharam in Ghatkesar Circle", aliases: [], slug: "pocharam-ibrahimpatnam", name: "Pocharam (Ibrahimpatnam)" }],
+  ["sangareddy:502001", { jurisdiction: "Sangareddy district, outside GHMC", aliases: [] }],
+  ["shankarpalli:501203", { jurisdiction: "Ranga Reddy district, outside GHMC", aliases: ["shankarpally"] }],
+  ["vikarabad:501101", { jurisdiction: "Vikarabad district, outside GHMC", aliases: [] }],
+]);
+
+function surroundingFor(row: RawOffice) {
+  return surroundingByKey.get(`${slugify(cleanName(row.officename))}:${String(row.pincode)}`);
+}
+
 const excluded: { office: string; pincode: string; reason: string }[] = [];
 const kept = raw.filter((row) => {
   const pin = String(row.pincode);
   const name = cleanName(row.officename);
   const ward = wardSlugFor(slugify(name));
+  if (surroundingFor(row)) return true;
   if (!/^500\d{3}$/.test(pin) && !(ward && /^50[0-2]\d{3}$/.test(pin))) return false;
   if (!ward && cityOffices.has(slugify(name))) {
     excluded.push({ office: row.officename, pincode: pin, reason: "Head office named after the whole city, not a locality" });
@@ -81,24 +102,29 @@ const kept = raw.filter((row) => {
 const metroDivisions = new Set(["Hyderabad City", "Hyderabad South East", "Secunderabad", "Sangareddy"]);
 const metroTaluks = /^(Rangareddy|Ghatkesar|Hyd|Ramachandrapuram|Patancheru)$/i;
 // Same-name villages whose PIN lies outside the ward's GHMC circle.
-const homonyms = new Set(["allapur:501141", "pocharam:501506", "himayathnagar:500075"]);
+const homonyms = new Set(["allapur:501141", "himayathnagar:500075"]);
 
 const bySlug = new Map<string, { name: string; slug: string; offices: RawOffice[] }>();
 for (const row of kept) {
-  const name = cleanName(row.officename);
-  const own = slugify(name);
+  const cleaned = cleanName(row.officename);
+  const own = slugify(cleaned);
   if (!own) continue;
-  const slug = wardSlugFor(own) ?? own;
+  const surrounding = surroundingFor(row);
+  const slug = surrounding?.slug ?? wardSlugFor(own) ?? own;
+  const name = surrounding?.name ?? cleaned;
   const entry = bySlug.get(slug) ?? { name, slug, offices: [] };
   entry.offices.push(row);
   bySlug.set(slug, entry);
 }
 
 for (const entry of bySlug.values()) {
-  const city = entry.offices.filter((row) => String(row.pincode).startsWith("500") && !homonyms.has(`${entry.slug}:${row.pincode}`));
-  const keep = city.length
+  const forced = entry.offices.filter((row) => surroundingFor(row));
+  const rest = entry.offices.filter((row) => !surroundingFor(row));
+  const city = rest.filter((row) => String(row.pincode).startsWith("500") && !homonyms.has(`${entry.slug}:${row.pincode}`));
+  const metro = city.length
     ? city
-    : entry.offices.filter((row) => metroDivisions.has(row.divisionname) && metroTaluks.test(row.taluk) && !homonyms.has(`${entry.slug}:${row.pincode}`));
+    : rest.filter((row) => metroDivisions.has(row.divisionname) && metroTaluks.test(row.taluk) && !homonyms.has(`${entry.slug}:${row.pincode}`));
+  const keep = [...forced, ...metro];
   for (const row of entry.offices) {
     if (!keep.includes(row)) excluded.push({ office: row.officename, pincode: String(row.pincode), reason: `Same name as ${entry.slug} but a different village outside Hyderabad (${row.taluk}, ${row.divisionname})` });
   }
@@ -123,6 +149,8 @@ const localities = [...bySlug.values()]
     })),
     postalDistrict: entry.offices[0]!.districtname,
     matchesWard: wardSlugs.has(entry.slug),
+    jurisdiction: entry.offices.map((row) => surroundingFor(row)?.jurisdiction).find(Boolean),
+    aliases: [...new Set(entry.offices.flatMap((row) => surroundingFor(row)?.aliases ?? []))],
   }));
 
 const output = {

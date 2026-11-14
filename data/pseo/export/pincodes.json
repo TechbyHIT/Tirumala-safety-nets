@@ -1,0 +1,889 @@
+{
+  "pinCodes": [
+    {
+      "pin": "500001",
+      "path": "/locations/hyderabad/pin/500001",
+      "localityIds": [
+        "postal-moazzampura",
+        "postal-seetharampet"
+      ]
+    },
+    {
+      "pin": "500002",
+      "path": "/locations/hyderabad/pin/500002",
+      "localityIds": [
+        "postal-moghalpura"
+      ]
+    },
+    {
+      "pin": "500003",
+      "path": "/locations/hyderabad/pin/500003",
+      "localityIds": [
+        "postal-secunderabad"
+      ]
+    },
+    {
+      "pin": "500004",
+      "path": "/locations/hyderabad/pin/500004",
+      "localityIds": [
+        "locality-219-khairatabad",
+        "postal-anandnagar",
+        "postal-bazarghat"
+      ]
+    },
+    {
+      "pin": "500005",
+      "path": "/locations/hyderabad/pin/500005",
+      "localityIds": [
+        "locality-062-balapur",
+        "locality-064-pahadi-shareef",
+        "postal-jalapally",
+        "postal-keshogiri"
+      ]
+    },
+    {
+      "pin": "500006",
+      "path": "/locations/hyderabad/pin/500006",
+      "localityIds": [
+        "postal-karwan-sahu",
+        "postal-kulsumpura",
+        "postal-mangalhat"
+      ]
+    },
+    {
+      "pin": "500007",
+      "path": "/locations/hyderabad/pin/500007",
+      "localityIds": [
+        "locality-173-tarnaka"
+      ]
+    },
+    {
+      "pin": "500008",
+      "path": "/locations/hyderabad/pin/500008",
+      "localityIds": [
+        "locality-187-kakatiya-nagar",
+        "locality-131-tolichowki",
+        "locality-132-golconda",
+        "postal-lunger-house",
+        "postal-nanakramguda",
+        "postal-sakkubai-nagar"
+      ]
+    },
+    {
+      "pin": "500009",
+      "path": "/locations/hyderabad/pin/500009",
+      "localityIds": [
+        "postal-manovikasnagar"
+      ]
+    },
+    {
+      "pin": "500010",
+      "path": "/locations/hyderabad/pin/500010",
+      "localityIds": [
+        "postal-alwal",
+        "postal-bolarum",
+        "postal-bolarum-bazar"
+      ]
+    },
+    {
+      "pin": "500011",
+      "path": "/locations/hyderabad/pin/500011",
+      "localityIds": [
+        "postal-bowenpally"
+      ]
+    },
+    {
+      "pin": "500012",
+      "path": "/locations/hyderabad/pin/500012",
+      "localityIds": [
+        "locality-151-begum-bazar"
+      ]
+    },
+    {
+      "pin": "500013",
+      "path": "/locations/hyderabad/pin/500013",
+      "localityIds": [
+        "locality-159-amberpet",
+        "postal-srinivasapuram",
+        "postal-zindatelismath"
+      ]
+    },
+    {
+      "pin": "500014",
+      "path": "/locations/hyderabad/pin/500014",
+      "localityIds": [
+        "postal-hakimpet"
+      ]
+    },
+    {
+      "pin": "500015",
+      "path": "/locations/hyderabad/pin/500015",
+      "localityIds": [
+        "postal-trimulgherry"
+      ]
+    },
+    {
+      "pin": "500016",
+      "path": "/locations/hyderabad/pin/500016",
+      "localityIds": [
+        "locality-200-begumpet",
+        "postal-prakashamnagar"
+      ]
+    },
+    {
+      "pin": "500017",
+      "path": "/locations/hyderabad/pin/500017",
+      "localityIds": [
+        "postal-lallaguda",
+        "postal-lallapet"
+      ]
+    },
+    {
+      "pin": "500018",
+      "path": "/locations/hyderabad/pin/500018",
+      "localityIds": [
+        "locality-205-erragadda",
+        "locality-247-vivekananda-nagar-colony",
+        "locality-257-moosapet",
+        "postal-bharat-nagar-colony",
+        "postal-fathenagar-colony",
+        "postal-sanathnagar-i-e",
+        "postal-swarajyanagar"
+      ]
+    },
+    {
+      "pin": "500019",
+      "path": "/locations/hyderabad/pin/500019",
+      "localityIds": [
+        "postal-lingampalli"
+      ]
+    },
+    {
+      "pin": "500020",
+      "path": "/locations/hyderabad/pin/500020",
+      "localityIds": [
+        "postal-ashoknagar",
+        "postal-golconda-chowrastha",
+        "postal-musheerabad-delivery",
+        "postal-musheerabad-nd",
+        "postal-zamistanpur"
+      ]
+    },
+    {
+      "pin": "500023",
+      "path": "/locations/hyderabad/pin/500023",
+      "localityIds": [
+        "locality-080-yakutpura"
+      ]
+    },
+    {
+      "pin": "500024",
+      "path": "/locations/hyderabad/pin/500024",
+      "localityIds": [
+        "postal-sahifa"
+      ]
+    },
+    {
+      "pin": "500025",
+      "path": "/locations/hyderabad/pin/500025",
+      "localityIds": [
+        "locality-197-padmarao-nagar",
+        "postal-himmatnagar"
+      ]
+    },
+    {
+      "pin": "500026",
+      "path": "/locations/hyderabad/pin/500026",
+      "localityIds": [
+        "postal-nehrunagar"
+      ]
+    },
+    {
+      "pin": "500027",
+      "path": "/locations/hyderabad/pin/500027",
+      "localityIds": [
+        "locality-155-barkatpura"
+      ]
+    },
+    {
+      "pin": "500028",
+      "path": "/locations/hyderabad/pin/500028",
+      "localityIds": [
+        "locality-145-shanti-nagar",
+        "postal-humayunnagar",
+        "postal-murad-nagar"
+      ]
+    },
+    {
+      "pin": "500029",
+      "path": "/locations/hyderabad/pin/500029",
+      "localityIds": [
+        "locality-220-himayathnagar",
+        "postal-gagan-mahal",
+        "postal-narayanguda"
+      ]
+    },
+    {
+      "pin": "500030",
+      "path": "/locations/hyderabad/pin/500030",
+      "localityIds": [
+        "locality-120-rajendra-nagar",
+        "postal-kismathpur"
+      ]
+    },
+    {
+      "pin": "500031",
+      "path": "/locations/hyderabad/pin/500031",
+      "localityIds": [
+        "postal-ibrahim-bagh-lines"
+      ]
+    },
+    {
+      "pin": "500032",
+      "path": "/locations/hyderabad/pin/500032",
+      "localityIds": [
+        "locality-225-gachibowli"
+      ]
+    },
+    {
+      "pin": "500033",
+      "path": "/locations/hyderabad/pin/500033",
+      "localityIds": [
+        "locality-215-jubilee-hills"
+      ]
+    },
+    {
+      "pin": "500034",
+      "path": "/locations/hyderabad/pin/500034",
+      "localityIds": [
+        "locality-221-banjara-hills"
+      ]
+    },
+    {
+      "pin": "500035",
+      "path": "/locations/hyderabad/pin/500035",
+      "localityIds": [
+        "locality-033-saroornagar",
+        "postal-huda-residential-complex"
+      ]
+    },
+    {
+      "pin": "500036",
+      "path": "/locations/hyderabad/pin/500036",
+      "localityIds": [
+        "postal-malakpet-colony",
+        "postal-osmannagar",
+        "postal-sripuram-colony"
+      ]
+    },
+    {
+      "pin": "500037",
+      "path": "/locations/hyderabad/pin/500037",
+      "localityIds": [
+        "locality-281-ranga-reddy-nagar",
+        "postal-balanagar-township"
+      ]
+    },
+    {
+      "pin": "500038",
+      "path": "/locations/hyderabad/pin/500038",
+      "localityIds": [
+        "postal-sanjeev-reddy-nagar"
+      ]
+    },
+    {
+      "pin": "500039",
+      "path": "/locations/hyderabad/pin/500039",
+      "localityIds": [
+        "locality-028-uppal",
+        "locality-010-peerzadiguda"
+      ]
+    },
+    {
+      "pin": "500040",
+      "path": "/locations/hyderabad/pin/500040",
+      "localityIds": [
+        "postal-aphb-colony-moulali",
+        "postal-ie-moulali"
+      ]
+    },
+    {
+      "pin": "500043",
+      "path": "/locations/hyderabad/pin/500043",
+      "localityIds": [
+        "locality-294-bahadurpally",
+        "locality-295-bowrampet",
+        "postal-dindigul",
+        "postal-gagillapur",
+        "postal-srirangavaram"
+      ]
+    },
+    {
+      "pin": "500044",
+      "path": "/locations/hyderabad/pin/500044",
+      "localityIds": [
+        "locality-162-nallakunta",
+        "postal-ambernagar",
+        "postal-new-nallakunta",
+        "postal-vidyanagar"
+      ]
+    },
+    {
+      "pin": "500045",
+      "path": "/locations/hyderabad/pin/500045",
+      "localityIds": [
+        "locality-208-yousufguda",
+        "postal-a-gs-staff-quarters"
+      ]
+    },
+    {
+      "pin": "500047",
+      "path": "/locations/hyderabad/pin/500047",
+      "localityIds": [
+        "locality-183-malkajgiri",
+        "postal-anandbagh"
+      ]
+    },
+    {
+      "pin": "500048",
+      "path": "/locations/hyderabad/pin/500048",
+      "localityIds": [
+        "locality-112-attapur",
+        "locality-113-hyderguda"
+      ]
+    },
+    {
+      "pin": "500049",
+      "path": "/locations/hyderabad/pin/500049",
+      "localityIds": [
+        "locality-240-miyapur",
+        "postal-mathrusri-nagar"
+      ]
+    },
+    {
+      "pin": "500050",
+      "path": "/locations/hyderabad/pin/500050",
+      "localityIds": [
+        "locality-238-chanda-nagar"
+      ]
+    },
+    {
+      "pin": "500052",
+      "path": "/locations/hyderabad/pin/500052",
+      "localityIds": [
+        "postal-gaganpahad",
+        "postal-hasannagar",
+        "postal-shivarampalli"
+      ]
+    },
+    {
+      "pin": "500053",
+      "path": "/locations/hyderabad/pin/500053",
+      "localityIds": [
+        "locality-105-falaknuma",
+        "postal-uppuguda"
+      ]
+    },
+    {
+      "pin": "500054",
+      "path": "/locations/hyderabad/pin/500054",
+      "localityIds": [
+        "postal-hmt-township"
+      ]
+    },
+    {
+      "pin": "500055",
+      "path": "/locations/hyderabad/pin/500055",
+      "localityIds": [
+        "locality-286-quthbullapur",
+        "locality-278-gajularamaram",
+        "postal-ida-jeedimetla"
+      ]
+    },
+    {
+      "pin": "500056",
+      "path": "/locations/hyderabad/pin/500056",
+      "localityIds": [
+        "locality-188-neredmet",
+        "postal-ramakrishna-puram"
+      ]
+    },
+    {
+      "pin": "500057",
+      "path": "/locations/hyderabad/pin/500057",
+      "localityIds": [
+        "locality-143-vijayanagar-colony"
+      ]
+    },
+    {
+      "pin": "500058",
+      "path": "/locations/hyderabad/pin/500058",
+      "localityIds": [
+        "locality-061-badangpet",
+        "locality-071-kanchanbagh"
+      ]
+    },
+    {
+      "pin": "500059",
+      "path": "/locations/hyderabad/pin/500059",
+      "localityIds": [
+        "locality-088-saidabad",
+        "postal-saidabad-colony",
+        "postal-santoshnagar-colony"
+      ]
+    },
+    {
+      "pin": "500060",
+      "path": "/locations/hyderabad/pin/500060",
+      "localityIds": [
+        "postal-chaithanyapuri-colony",
+        "postal-dilsukhnagar-colony",
+        "postal-p-and-t-colony"
+      ]
+    },
+    {
+      "pin": "500061",
+      "path": "/locations/hyderabad/pin/500061",
+      "localityIds": [
+        "locality-174-seethaphalmandi"
+      ]
+    },
+    {
+      "pin": "500062",
+      "path": "/locations/hyderabad/pin/500062",
+      "localityIds": [
+        "locality-015-dr-as-rao-nagar",
+        "postal-ecil"
+      ]
+    },
+    {
+      "pin": "500064",
+      "path": "/locations/hyderabad/pin/500064",
+      "localityIds": [
+        "locality-111-kishanbagh",
+        "postal-bahadurpura",
+        "postal-tadbun"
+      ]
+    },
+    {
+      "pin": "500065",
+      "path": "/locations/hyderabad/pin/500065",
+      "localityIds": [
+        "locality-104-shah-ali-banda",
+        "postal-fatehdarwaza"
+      ]
+    },
+    {
+      "pin": "500067",
+      "path": "/locations/hyderabad/pin/500067",
+      "localityIds": [
+        "postal-suchitra-junction"
+      ]
+    },
+    {
+      "pin": "500068",
+      "path": "/locations/hyderabad/pin/500068",
+      "localityIds": [
+        "locality-045-mansoorabad"
+      ]
+    },
+    {
+      "pin": "500070",
+      "path": "/locations/hyderabad/pin/500070",
+      "localityIds": [
+        "locality-043-vanasthalipuram",
+        "postal-sarada-nagar",
+        "postal-vaidehinagar"
+      ]
+    },
+    {
+      "pin": "500072",
+      "path": "/locations/hyderabad/pin/500072",
+      "localityIds": [
+        "locality-247-vivekananda-nagar-colony",
+        "locality-249-kukatpally"
+      ]
+    },
+    {
+      "pin": "500073",
+      "path": "/locations/hyderabad/pin/500073",
+      "localityIds": [
+        "locality-207-srinagar-colony"
+      ]
+    },
+    {
+      "pin": "500074",
+      "path": "/locations/hyderabad/pin/500074",
+      "localityIds": [
+        "postal-l-b-nagar"
+      ]
+    },
+    {
+      "pin": "500075",
+      "path": "/locations/hyderabad/pin/500075",
+      "localityIds": [
+        "locality-125-kokapet",
+        "locality-126-gandipet",
+        "postal-aziz-nagar",
+        "postal-janwada",
+        "postal-wattinagulapalli"
+      ]
+    },
+    {
+      "pin": "500076",
+      "path": "/locations/hyderabad/pin/500076",
+      "localityIds": [
+        "locality-020-mallapur",
+        "postal-i-e-nacharam",
+        "postal-snehapuri-colony"
+      ]
+    },
+    {
+      "pin": "500077",
+      "path": "/locations/hyderabad/pin/500077",
+      "localityIds": [
+        "postal-kattedan-ie"
+      ]
+    },
+    {
+      "pin": "500078",
+      "path": "/locations/hyderabad/pin/500078",
+      "localityIds": [
+        "postal-bomraspet",
+        "postal-devaryamjal",
+        "postal-ponnal",
+        "postal-thumkunta",
+        "postal-uddemarri"
+      ]
+    },
+    {
+      "pin": "500079",
+      "path": "/locations/hyderabad/pin/500079",
+      "localityIds": [
+        "locality-059-jillelaguda",
+        "postal-hasthinapuram",
+        "postal-karmanghat",
+        "postal-vaishalinagar"
+      ]
+    },
+    {
+      "pin": "500080",
+      "path": "/locations/hyderabad/pin/500080",
+      "localityIds": [
+        "locality-165-gandhi-nagar"
+      ]
+    },
+    {
+      "pin": "500081",
+      "path": "/locations/hyderabad/pin/500081",
+      "localityIds": [
+        "locality-232-madhapur"
+      ]
+    },
+    {
+      "pin": "500082",
+      "path": "/locations/hyderabad/pin/500082",
+      "localityIds": [
+        "locality-218-somajiguda",
+        "postal-i-m-colony"
+      ]
+    },
+    {
+      "pin": "500083",
+      "path": "/locations/hyderabad/pin/500083",
+      "localityIds": [
+        "locality-005-nagaram"
+      ]
+    },
+    {
+      "pin": "500084",
+      "path": "/locations/hyderabad/pin/500084",
+      "localityIds": [
+        "locality-234-kondapur",
+        "postal-kothaguda"
+      ]
+    },
+    {
+      "pin": "500085",
+      "path": "/locations/hyderabad/pin/500085",
+      "localityIds": [
+        "locality-252-kphb-colony"
+      ]
+    },
+    {
+      "pin": "500086",
+      "path": "/locations/hyderabad/pin/500086",
+      "localityIds": [
+        "postal-don-bosco-nagar"
+      ]
+    },
+    {
+      "pin": "500087",
+      "path": "/locations/hyderabad/pin/500087",
+      "localityIds": [
+        "locality-003-jawahar-nagar",
+        "postal-jj-nagar-colony"
+      ]
+    },
+    {
+      "pin": "500088",
+      "path": "/locations/hyderabad/pin/500088",
+      "localityIds": [
+        "postal-katchavanisingaram",
+        "postal-korremal",
+        "postal-pratapsingaram",
+        "postal-venkatadri"
+      ]
+    },
+    {
+      "pin": "500089",
+      "path": "/locations/hyderabad/pin/500089",
+      "localityIds": [
+        "locality-124-narsingi",
+        "locality-127-manikonda",
+        "postal-mancherevula"
+      ]
+    },
+    {
+      "pin": "500090",
+      "path": "/locations/hyderabad/pin/500090",
+      "localityIds": [
+        "locality-273-nizampet",
+        "locality-274-bachupally",
+        "locality-276-pragathi-nagar",
+        "postal-mallampet"
+      ]
+    },
+    {
+      "pin": "500091",
+      "path": "/locations/hyderabad/pin/500091",
+      "localityIds": [
+        "locality-123-hydershahkote",
+        "postal-himayath-sagar"
+      ]
+    },
+    {
+      "pin": "500092",
+      "path": "/locations/hyderabad/pin/500092",
+      "localityIds": [
+        "locality-011-boduppal"
+      ]
+    },
+    {
+      "pin": "500093",
+      "path": "/locations/hyderabad/pin/500093",
+      "localityIds": [
+        "postal-vikasnagar"
+      ]
+    },
+    {
+      "pin": "500094",
+      "path": "/locations/hyderabad/pin/500094",
+      "localityIds": [
+        "postal-sainikpuri"
+      ]
+    },
+    {
+      "pin": "500095",
+      "path": "/locations/hyderabad/pin/500095",
+      "localityIds": [
+        "postal-putlibowli"
+      ]
+    },
+    {
+      "pin": "500096",
+      "path": "/locations/hyderabad/pin/500096",
+      "localityIds": [
+        "locality-222-film-nagar"
+      ]
+    },
+    {
+      "pin": "500097",
+      "path": "/locations/hyderabad/pin/500097",
+      "localityIds": [
+        "locality-060-meerpet",
+        "locality-254-gayatri-nagar"
+      ]
+    },
+    {
+      "pin": "500098",
+      "path": "/locations/hyderabad/pin/500098",
+      "localityIds": [
+        "locality-009-medipally"
+      ]
+    },
+    {
+      "pin": "500100",
+      "path": "/locations/hyderabad/pin/500100",
+      "localityIds": [
+        "locality-288-kompally",
+        "postal-doolapalli",
+        "postal-pochampally"
+      ]
+    },
+    {
+      "pin": "500101",
+      "path": "/locations/hyderabad/pin/500101",
+      "localityIds": [
+        "locality-300-shamirpet",
+        "postal-aliabad",
+        "postal-anantaram",
+        "postal-jaggamguda",
+        "postal-kolthur",
+        "postal-kyasaram",
+        "postal-lalgadi-malakpet",
+        "postal-mudchintanapalli",
+        "postal-peddalaxmapur",
+        "postal-turkapalliyadaram"
+      ]
+    },
+    {
+      "pin": "500103",
+      "path": "/locations/hyderabad/pin/500103",
+      "localityIds": [
+        "postal-jai-jawan-colony"
+      ]
+    },
+    {
+      "pin": "500104",
+      "path": "/locations/hyderabad/pin/500104",
+      "localityIds": [
+        "postal-chitrapuri-colony"
+      ]
+    },
+    {
+      "pin": "500105",
+      "path": "/locations/hyderabad/pin/500105",
+      "localityIds": [
+        "locality-206-vengal-rao-nagar"
+      ]
+    },
+    {
+      "pin": "500107",
+      "path": "/locations/hyderabad/pin/500107",
+      "localityIds": [
+        "postal-gopanpally"
+      ]
+    },
+    {
+      "pin": "500110",
+      "path": "/locations/hyderabad/pin/500110",
+      "localityIds": [
+        "postal-prashasan-nagar"
+      ]
+    },
+    {
+      "pin": "501101",
+      "path": "/locations/hyderabad/pin/501101",
+      "localityIds": [
+        "postal-vikarabad"
+      ]
+    },
+    {
+      "pin": "501203",
+      "path": "/locations/hyderabad/pin/501203",
+      "localityIds": [
+        "postal-mokila",
+        "postal-shankarpalli"
+      ]
+    },
+    {
+      "pin": "501218",
+      "path": "/locations/hyderabad/pin/501218",
+      "localityIds": [
+        "locality-118-shamshabad"
+      ]
+    },
+    {
+      "pin": "501301",
+      "path": "/locations/hyderabad/pin/501301",
+      "localityIds": [
+        "locality-001-keesara",
+        "locality-006-ghatkesar",
+        "locality-007-edulabad"
+      ]
+    },
+    {
+      "pin": "501359",
+      "path": "/locations/hyderabad/pin/501359",
+      "localityIds": [
+        "locality-067-mankhal"
+      ]
+    },
+    {
+      "pin": "501401",
+      "path": "/locations/hyderabad/pin/501401",
+      "localityIds": [
+        "locality-297-medchal"
+      ]
+    },
+    {
+      "pin": "501503",
+      "path": "/locations/hyderabad/pin/501503",
+      "localityIds": [
+        "postal-chevella"
+      ]
+    },
+    {
+      "pin": "501504",
+      "path": "/locations/hyderabad/pin/501504",
+      "localityIds": [
+        "postal-moinabad"
+      ]
+    },
+    {
+      "pin": "501505",
+      "path": "/locations/hyderabad/pin/501505",
+      "localityIds": [
+        "locality-052-pedda-amberpet"
+      ]
+    },
+    {
+      "pin": "501506",
+      "path": "/locations/hyderabad/pin/501506",
+      "localityIds": [
+        "postal-ibrahimpatnam",
+        "postal-pocharam-ibrahimpatnam"
+      ]
+    },
+    {
+      "pin": "501510",
+      "path": "/locations/hyderabad/pin/501510",
+      "localityIds": [
+        "locality-054-kongara-kalan",
+        "locality-055-adibatla",
+        "postal-mangalpalli"
+      ]
+    },
+    {
+      "pin": "502001",
+      "path": "/locations/hyderabad/pin/502001",
+      "localityIds": [
+        "postal-sangareddy"
+      ]
+    },
+    {
+      "pin": "502032",
+      "path": "/locations/hyderabad/pin/502032",
+      "localityIds": [
+        "locality-263-tellapur",
+        "locality-271-ameenpur"
+      ]
+    },
+    {
+      "pin": "502300",
+      "path": "/locations/hyderabad/pin/502300",
+      "localityIds": [
+        "locality-265-muthangi",
+        "postal-kollur"
+      ]
+    },
+    {
+      "pin": "502307",
+      "path": "/locations/hyderabad/pin/502307",
+      "localityIds": [
+        "postal-isnapur"
+      ]
+    }
+  ]
+}

@@ -20,8 +20,26 @@ html {
   color: #061224;
 }
 
+.hero-track {
+  animation: hero-scroll-y 28s linear infinite;
+  will-change: transform;
+}
+
+.hero-marquee:hover .hero-track {
+  animation-play-state: paused;
+}
+
 .nav-panel {
   animation: rise 160ms ease-out;
+}
+
+@keyframes hero-scroll-y {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -50%, 0);
+  }
 }
 
 @keyframes rise {
@@ -32,5 +50,11 @@ html {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-track {
+    animation: none;
   }
 }

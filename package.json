@@ -16,6 +16,7 @@
     "pseo:check": "tsx scripts/generate-hyderabad-pseo.ts --check",
     "pseo:records": "tsx scripts/generate-hyderabad-pseo.ts --write-records",
     "pseo:postal": "tsx scripts/build-postal-localities.ts",
+    "pseo:export": "tsx scripts/export-location-database.ts",
     "pseo:legacy": "tsx scripts/audit-legacy.ts",
     "pseo:verify": "tsx scripts/verify-http.ts",
     "gallery:ingest": "tsx scripts/ingest-gallery.ts",
